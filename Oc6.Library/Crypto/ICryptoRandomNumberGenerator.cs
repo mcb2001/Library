@@ -20,6 +20,11 @@ namespace Oc6.Library.Crypto
         int Next(int from, int to);
 
         /// <summary>
+        /// Get a random <see cref="Int32"/>
+        /// </summary>
+        int NextUnBounded();
+
+        /// <summary>
         /// Fisher-Yates shuffles any <see cref="IList{T}"/> (includes <see cref="List{T}"/> and T[]
         /// </summary>
         void Shuffle<T>(IList<T> list);

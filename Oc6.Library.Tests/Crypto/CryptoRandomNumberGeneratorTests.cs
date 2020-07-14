@@ -149,5 +149,31 @@ namespace Oc6.Library.Tests.Crypto
         {
             Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.Next(0, 0));
         }
+
+        [TestMethod]
+        public void NextUnBounded_ReturnsBothPositiveAndNegativeValues()
+        {
+            int i;
+
+            //check if we hit below 0
+            for (i = 0; i < ITERATIONS && randomNumberGenerator.NextUnBounded() < 0; ++i)
+            {
+            }
+
+            if (i == ITERATIONS)
+            {
+                Assert.IsTrue(false);
+            }
+
+            //check if we hit above 0
+            for (i = 0; i < ITERATIONS && randomNumberGenerator.NextUnBounded() > 0; ++i)
+            {
+            }
+
+            if (i == ITERATIONS)
+            {
+                Assert.IsTrue(false);
+            }
+        }
     }
 }

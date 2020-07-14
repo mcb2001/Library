@@ -49,6 +49,11 @@
             Get bounded int
             </summary>
         </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.NextUnBounded">
+            <summary>
+            Get a random <see cref="T:System.Int32"/>
+            </summary>
+        </member>
         <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Dispose">
             <summary>
             Disposes the internal numbergenerator if shouldDispose is true
@@ -67,6 +72,11 @@
         <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Next(System.Int32,System.Int32)">
             <summary>
             Get bounded int
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.NextUnBounded">
+            <summary>
+            Get a random <see cref="T:System.Int32"/>
             </summary>
         </member>
         <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Collections.Generic.IList{``0})">

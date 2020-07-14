@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -14,7 +15,6 @@ namespace Oc6.Library.Crypto
     public sealed class CryptoRandomNumberGenerator : IDisposable, ICryptoRandomNumberGenerator
     {
         private readonly object syncRoot = new object();
-        private readonly byte[] buffer = new byte[4];
         private readonly RandomNumberGenerator randomNumberGenerator;
         private readonly bool shouldDispose;
 
@@ -77,15 +77,7 @@ namespace Oc6.Library.Crypto
         /// </summary>
         public void Shuffle<T>(Memory<T> memory)
         {
-            var span = memory.Span;
-
-            for (int i = span.Length - 1; i > 0; --i)
-            {
-                int j = this.Next(0, i + 1);
-                T a = span[i];
-                span[i] = span[j];
-                span[j] = a;
-            }
+            Shuffle(memory.Span);
         }
 
         /// <summary>
@@ -93,18 +85,20 @@ namespace Oc6.Library.Crypto
         /// </summary>
         public int Next()
         {
-            var i = Yield();
+            var i = NextUnBounded();
 
             if (i == int.MinValue)
             {
-                //There are two 0s
+                //There are currently one 0, this is the second
                 return 0;
             }
-            else
+            //There are two of everything else
+            else if (i < 0)
             {
-                //And two of everything else
-                return Math.Abs(i);
+                return -i;
             }
+
+            return i;
         }
 
         /// <summary>
@@ -120,13 +114,18 @@ namespace Oc6.Library.Crypto
             return (Next() / (int.MaxValue / (to - from))) + from;
         }
 
-        private int Yield()
+        /// <summary>
+        /// Get a random <see cref="Int32"/>
+        /// </summary>
+        public int NextUnBounded()
         {
             lock (syncRoot)
             {
+                Span<byte> buffer = stackalloc byte[4];
+
                 randomNumberGenerator.GetBytes(buffer);
 
-                return BitConverter.ToInt32(buffer, 0);
+                return BitConverter.ToInt32(buffer);
             }
         }
 
