@@ -8,6 +8,9 @@
     <Copyright>2020 Marc Barnholdt</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/mcb2001/Oc6.Library</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mcb2001/Oc6.Library</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
