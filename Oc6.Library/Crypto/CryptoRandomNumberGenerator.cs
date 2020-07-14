@@ -45,7 +45,7 @@ namespace Oc6.Library.Crypto
         }
 
         /// <summary>
-        /// Shuffles any <see cref="IList{T}"/> (includes <see cref="List{T}"/> and T[]
+        /// Fisher-Yates shuffles any <see cref="IList{T}"/> (includes <see cref="List{T}"/> and T[]
         /// </summary>
         public void Shuffle<T>(IList<T> list)
         {
@@ -59,7 +59,7 @@ namespace Oc6.Library.Crypto
         }
 
         /// <summary>
-        /// Shuffles any <see cref="Span{T}"/>
+        /// Fisher-Yates shuffles any <see cref="Span{T}"/>
         /// </summary>
         public void Shuffle<T>(Span<T> span)
         {
@@ -73,7 +73,7 @@ namespace Oc6.Library.Crypto
         }
 
         /// <summary>
-        /// Shuffles any <see cref="Memory{T}"/>
+        /// Fisher-Yates shuffles any <see cref="Memory{T}"/>
         /// </summary>
         public void Shuffle<T>(Memory<T> memory)
         {

@@ -20,17 +20,17 @@ namespace Oc6.Library.Crypto
         int Next(int from, int to);
 
         /// <summary>
-        /// Shuffles any <see cref="IList{T}"/> (includes <see cref="List{T}"/> and T[]
+        /// Fisher-Yates shuffles any <see cref="IList{T}"/> (includes <see cref="List{T}"/> and T[]
         /// </summary>
         void Shuffle<T>(IList<T> list);
 
         /// <summary>
-        /// Shuffles any <see cref="Span{T}"/>
+        /// Fisher-Yates shuffles any <see cref="Span{T}"/>
         /// </summary>
         public void Shuffle<T>(Span<T> span);
 
         /// <summary>
-        /// Shuffles any <see cref="Memory{T}"/>
+        /// Fisher-Yates shuffles any <see cref="Memory{T}"/>
         /// </summary>
         public void Shuffle<T>(Memory<T> memory);
     }

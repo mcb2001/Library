@@ -26,17 +26,17 @@
         </member>
         <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Shuffle``1(System.Collections.Generic.IList{``0})">
             <summary>
-            Shuffles any <see cref="T:System.Collections.Generic.IList`1"/> (includes <see cref="T:System.Collections.Generic.List`1"/> and T[]
+            Fisher-Yates shuffles any <see cref="T:System.Collections.Generic.IList`1"/> (includes <see cref="T:System.Collections.Generic.List`1"/> and T[]
             </summary>
         </member>
         <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Shuffle``1(System.Span{``0})">
             <summary>
-            Shuffles any <see cref="T:System.Span`1"/>
+            Fisher-Yates shuffles any <see cref="T:System.Span`1"/>
             </summary>
         </member>
         <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Shuffle``1(System.Memory{``0})">
             <summary>
-            Shuffles any <see cref="T:System.Memory`1"/>
+            Fisher-Yates shuffles any <see cref="T:System.Memory`1"/>
             </summary>
         </member>
         <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Next">
@@ -71,17 +71,17 @@
         </member>
         <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Collections.Generic.IList{``0})">
             <summary>
-            Shuffles any <see cref="T:System.Collections.Generic.IList`1"/> (includes <see cref="T:System.Collections.Generic.List`1"/> and T[]
+            Fisher-Yates shuffles any <see cref="T:System.Collections.Generic.IList`1"/> (includes <see cref="T:System.Collections.Generic.List`1"/> and T[]
             </summary>
         </member>
         <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Span{``0})">
             <summary>
-            Shuffles any <see cref="T:System.Span`1"/>
+            Fisher-Yates shuffles any <see cref="T:System.Span`1"/>
             </summary>
         </member>
         <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Memory{``0})">
             <summary>
-            Shuffles any <see cref="T:System.Memory`1"/>
+            Fisher-Yates shuffles any <see cref="T:System.Memory`1"/>
             </summary>
         </member>
     </members>
