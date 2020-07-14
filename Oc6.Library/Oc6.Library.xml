@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Oc6.Library</name>
+    </assembly>
+    <members>
+        <member name="T:Oc6.Library.Crypto.CryptoRandomNumberGenerator">
+            <summary>
+            Uses a <see cref="T:System.Security.Cryptography.RandomNumberGenerator"/> to generate Int32 values
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.#ctor">
+            <summary>
+            Creates a new default and shouldDispose = true
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.#ctor(System.Security.Cryptography.RandomNumberGenerator)">
+            <summary>
+            Uses supplied numbergenerator and shouldDispose = true
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.#ctor(System.Security.Cryptography.RandomNumberGenerator,System.Boolean)">
+            <summary>
+            Uses supplied parameters
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Shuffle``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Shuffles any <see cref="T:System.Collections.Generic.IList`1"/> (includes <see cref="T:System.Collections.Generic.List`1"/> and T[]
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Shuffle``1(System.Span{``0})">
+            <summary>
+            Shuffles any <see cref="T:System.Span`1"/>
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Shuffle``1(System.Memory{``0})">
+            <summary>
+            Shuffles any <see cref="T:System.Memory`1"/>
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Next">
+            <summary>
+            Get non-negative int
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Next(System.Int32,System.Int32)">
+            <summary>
+            Get bounded int
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Dispose">
+            <summary>
+            Disposes the internal numbergenerator if shouldDispose is true
+            </summary>
+        </member>
+        <member name="T:Oc6.Library.Crypto.ICryptoRandomNumberGenerator">
+            <summary>
+            Uses a <see cref="T:System.Security.Cryptography.RandomNumberGenerator"/> to generate Int32 values
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Next">
+            <summary>
+            Get non-negative int
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Next(System.Int32,System.Int32)">
+            <summary>
+            Get bounded int
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Shuffles any <see cref="T:System.Collections.Generic.IList`1"/> (includes <see cref="T:System.Collections.Generic.List`1"/> and T[]
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Span{``0})">
+            <summary>
+            Shuffles any <see cref="T:System.Span`1"/>
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Memory{``0})">
+            <summary>
+            Shuffles any <see cref="T:System.Memory`1"/>
+            </summary>
+        </member>
+    </members>
+</doc>
