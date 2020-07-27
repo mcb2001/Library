@@ -12,12 +12,12 @@ namespace Oc6.Library.Crypto
         /// <summary>
         /// Get non-negative int
         /// </summary>
-        int Next();
+        int NextInt();
 
         /// <summary>
         /// Get bounded int
         /// </summary>
-        int Next(int from, int to);
+        int NextInt(int from, int upTo);
 
         /// <summary>
         /// Get a random <see cref="Int32"/>

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Oc6.Library.Resources;
+using System;
 using System.Buffers;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -49,9 +51,14 @@ namespace Oc6.Library.Crypto
         /// </summary>
         public void Shuffle<T>(IList<T> list)
         {
+            if (list == null)
+            {
+                throw new ArgumentNullException(nameof(list));
+            }
+
             for (int i = list.Count - 1; i > 0; --i)
             {
-                int j = this.Next(0, i + 1);
+                int j = this.NextInt(0, i + 1);
                 T a = list[i];
                 list[i] = list[j];
                 list[j] = a;
@@ -65,7 +72,7 @@ namespace Oc6.Library.Crypto
         {
             for (int i = span.Length - 1; i > 0; --i)
             {
-                int j = this.Next(0, i + 1);
+                int j = this.NextInt(0, i + 1);
                 T a = span[i];
                 span[i] = span[j];
                 span[j] = a;
@@ -83,7 +90,7 @@ namespace Oc6.Library.Crypto
         /// <summary>
         /// Get non-negative int
         /// </summary>
-        public int Next()
+        public int NextInt()
         {
             var i = NextUnBounded();
 
@@ -104,14 +111,16 @@ namespace Oc6.Library.Crypto
         /// <summary>
         /// Get bounded int
         /// </summary>
-        public int Next(int from, int to)
+        public int NextInt(int from, int upTo)
         {
-            if (to <= from)
+            if (upTo <= from)
             {
-                throw new ArgumentException($"[{nameof(from)}] must be smaller than [{nameof(to)}]");
+                var message = string.Format(CultureInfo.InvariantCulture, ErrorMessages.CryptoRandomNumberGenerator_MustBeOrdered, nameof(from), nameof(upTo));
+
+                throw new ArgumentException(message);
             }
 
-            return (Next() / (int.MaxValue / (to - from))) + from;
+            return (NextInt() / (int.MaxValue / (upTo - from))) + from;
         }
 
         /// <summary>

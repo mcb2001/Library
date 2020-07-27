@@ -37,7 +37,7 @@ namespace Oc6.Library.Tests.Crypto
             {
                 int i;
 
-                for (i = 0; i < ITERATIONS && randomNumberGenerator.Next(from, to) != number; ++i)
+                for (i = 0; i < ITERATIONS && randomNumberGenerator.NextInt(from, to) != number; ++i)
                 {
                 }
 
@@ -53,7 +53,7 @@ namespace Oc6.Library.Tests.Crypto
         {
             for (int i = 0; i < ITERATIONS; ++i)
             {
-                Assert.IsTrue(randomNumberGenerator.Next() >= 0);
+                Assert.IsTrue(randomNumberGenerator.NextInt() >= 0);
             }
         }
 
@@ -62,7 +62,7 @@ namespace Oc6.Library.Tests.Crypto
         {
             for (int i = 0; i < ITERATIONS; ++i)
             {
-                Assert.IsTrue(randomNumberGenerator.Next(-100, 0) < 0);
+                Assert.IsTrue(randomNumberGenerator.NextInt(-100, 0) < 0);
             }
         }
 
@@ -88,11 +88,11 @@ namespace Oc6.Library.Tests.Crypto
         public void Next_IsRandom()
         {
             int[] first = Enumerable.Range(0, ITERATIONS)
-                .Select(_ => randomNumberGenerator.Next())
+                .Select(_ => randomNumberGenerator.NextInt())
                 .ToArray();
 
             int[] second = Enumerable.Range(0, ITERATIONS)
-                .Select(_ => randomNumberGenerator.Next())
+                .Select(_ => randomNumberGenerator.NextInt())
                 .ToArray();
 
             int equal = 0;
@@ -132,7 +132,7 @@ namespace Oc6.Library.Tests.Crypto
         {
             for (int i = 0; i < ITERATIONS; ++i)
             {
-                var a = randomNumberGenerator.Next(from, to);
+                var a = randomNumberGenerator.NextInt(from, to);
                 Assert.IsTrue(a >= from);
                 Assert.IsTrue(a < to);
             }
@@ -141,13 +141,13 @@ namespace Oc6.Library.Tests.Crypto
         [TestMethod]
         public void NextToFrom_FailsOnReversedFromTo()
         {
-            Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.Next(0, -1));
+            Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.NextInt(0, -1));
         }
 
         [TestMethod]
         public void NextToFrom_FailsOnEqualFromTo()
         {
-            Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.Next(0, 0));
+            Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.NextInt(0, 0));
         }
 
         [TestMethod]
