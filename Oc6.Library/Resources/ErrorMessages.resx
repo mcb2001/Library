@@ -120,10 +120,34 @@
   <data name="CryptoRandomNumberGenerator_MustBeOrdered" xml:space="preserve">
     <value>[{0}] must be smaller than [{1}]</value>
   </data>
+  <data name="MustBePositive" xml:space="preserve">
+    <value>Must be positive</value>
+  </data>
+  <data name="NeedsOneNonZeroValue" xml:space="preserve">
+    <value>At least one parameter must be non-zero</value>
+  </data>
+  <data name="NoArguments" xml:space="preserve">
+    <value>No arguments found</value>
+  </data>
+  <data name="NonZero" xml:space="preserve">
+    <value>Cannot be 0</value>
+  </data>
+  <data name="Parser_InvalidNumber" xml:space="preserve">
+    <value>Invalid Number [{0}]</value>
+  </data>
+  <data name="Parser_InvalidTokenType" xml:space="preserve">
+    <value>Invalid TokenType [{0}]</value>
+  </data>
+  <data name="Parser_InvalidVariable" xml:space="preserve">
+    <value>Invalid Variable [{0}]</value>
+  </data>
   <data name="State_UnknownFunction" xml:space="preserve">
     <value>Function [{0}] is unknown</value>
   </data>
   <data name="Tokenizer_Only_SingleCharacterNumberFormats" xml:space="preserve">
     <value>Only single character number formats are acceptable</value>
+  </data>
+  <data name="TokenType_InvalidType" xml:space="preserve">
+    <value>Invalid type</value>
   </data>
 </root>

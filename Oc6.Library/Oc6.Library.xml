@@ -39,12 +39,12 @@
             Fisher-Yates shuffles any <see cref="T:System.Memory`1"/>
             </summary>
         </member>
-        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Next">
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.NextInt">
             <summary>
             Get non-negative int
             </summary>
         </member>
-        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.Next(System.Int32,System.Int32)">
+        <member name="M:Oc6.Library.Crypto.CryptoRandomNumberGenerator.NextInt(System.Int32,System.Int32)">
             <summary>
             Get bounded int
             </summary>
@@ -64,12 +64,12 @@
             Uses a <see cref="T:System.Security.Cryptography.RandomNumberGenerator"/> to generate Int32 values
             </summary>
         </member>
-        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Next">
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.NextInt">
             <summary>
             Get non-negative int
             </summary>
         </member>
-        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Next(System.Int32,System.Int32)">
+        <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.NextInt(System.Int32,System.Int32)">
             <summary>
             Get bounded int
             </summary>
@@ -92,6 +92,37 @@
         <member name="M:Oc6.Library.Crypto.ICryptoRandomNumberGenerator.Shuffle``1(System.Memory{``0})">
             <summary>
             Fisher-Yates shuffles any <see cref="T:System.Memory`1"/>
+            </summary>
+        </member>
+        <member name="T:Oc6.Library.Resources.ErrorMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.CryptoRandomNumberGenerator_MustBeOrdered">
+            <summary>
+              Looks up a localized string similar to [{0}] must be smaller than [{1}].
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.State_UnknownFunction">
+            <summary>
+              Looks up a localized string similar to Function [{0}] is unknown.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.Tokenizer_Only_SingleCharacterNumberFormats">
+            <summary>
+              Looks up a localized string similar to Only single character number formats are acceptable.
             </summary>
         </member>
     </members>

@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oc6.Library.Calc;
-using Oc6.Library.Calc.Models;
+using Oc6.Library.Maths;
+using Oc6.Library.Maths.Internals;
 using System;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Oc6.Library.Tests.Calculator
+namespace Oc6.Library.Tests.Maths
 {
     [TestClass]
     public class TokenizerTests

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Oc6.Library.Resources;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oc6.Library.Calc.Models
+namespace Oc6.Library.Maths.Internals
 {
     internal enum TokenType
     {
@@ -22,35 +23,31 @@ namespace Oc6.Library.Calc.Models
         ParanthesisOpen = 9,    // '('
         ParanthesisClose = 10,  // ')'
 
-        UnaryMinus = 11,        // '-'
+        UnaryMinus = 11,        // '-',
     }
 
     internal static class TokenTypeExtensions
     {
+        public static bool IsOperator(this TokenType tokenType)
+        {
+            return tokenType == TokenType.Nop
+                || tokenType == TokenType.Add
+                || tokenType == TokenType.Subtract
+                || tokenType == TokenType.Multiply
+                || tokenType == TokenType.Divide
+                || tokenType == TokenType.Power;
+        }
+
         public static bool HasHigherPrecedenceThan(this TokenType that, TokenType other)
         {
-            switch (that)
+            if (!that.IsOperator())
             {
-                case TokenType.Number:
-                case TokenType.Word:
-                case TokenType.ParanthesisOpen:
-                case TokenType.ParanthesisClose:
-                case TokenType.UnaryMinus:
-                    {
-                        throw new ArgumentException("Invalid type");
-                    }
+                throw new ArgumentException(ErrorMessages.TokenType_InvalidType, nameof(that));
             }
 
-            switch (other)
+            if (!other.IsOperator())
             {
-                case TokenType.Number:
-                case TokenType.Word:
-                case TokenType.ParanthesisOpen:
-                case TokenType.ParanthesisClose:
-                case TokenType.UnaryMinus:
-                    {
-                        throw new ArgumentException("Invalid type");
-                    }
+                throw new ArgumentException(ErrorMessages.TokenType_InvalidType, nameof(other));
             }
 
             int l = (int)that;

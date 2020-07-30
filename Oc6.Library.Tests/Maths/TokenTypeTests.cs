@@ -1,12 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oc6.Library.Calc.Models;
+using Oc6.Library.Maths;
+using Oc6.Library.Maths.Internals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oc6.Library.Tests.Calculator
+namespace Oc6.Library.Tests.Maths
 {
     [TestClass]
     public class TokenTypeTests

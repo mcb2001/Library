@@ -1,5 +1,4 @@
-﻿using Oc6.Library.Calc.Models;
-using Oc6.Library.Resources;
+﻿using Oc6.Library.Resources;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oc6.Library.Calc
+namespace Oc6.Library.Maths.Internals
 {
     internal sealed class Tokenizer
     {

@@ -70,6 +70,69 @@ namespace Oc6.Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Must be positive.
+        /// </summary>
+        internal static string MustBePositive {
+            get {
+                return ResourceManager.GetString("MustBePositive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At least one parameter must be non-zero.
+        /// </summary>
+        internal static string NeedsOneNonZeroValue {
+            get {
+                return ResourceManager.GetString("NeedsOneNonZeroValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No arguments found.
+        /// </summary>
+        internal static string NoArguments {
+            get {
+                return ResourceManager.GetString("NoArguments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot be 0.
+        /// </summary>
+        internal static string NonZero {
+            get {
+                return ResourceManager.GetString("NonZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Number [{0}].
+        /// </summary>
+        internal static string Parser_InvalidNumber {
+            get {
+                return ResourceManager.GetString("Parser_InvalidNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid TokenType [{0}].
+        /// </summary>
+        internal static string Parser_InvalidTokenType {
+            get {
+                return ResourceManager.GetString("Parser_InvalidTokenType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Variable [{0}].
+        /// </summary>
+        internal static string Parser_InvalidVariable {
+            get {
+                return ResourceManager.GetString("Parser_InvalidVariable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Function [{0}] is unknown.
         /// </summary>
         internal static string State_UnknownFunction {
@@ -84,6 +147,15 @@ namespace Oc6.Library.Resources {
         internal static string Tokenizer_Only_SingleCharacterNumberFormats {
             get {
                 return ResourceManager.GetString("Tokenizer_Only_SingleCharacterNumberFormats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid type.
+        /// </summary>
+        internal static string TokenType_InvalidType {
+            get {
+                return ResourceManager.GetString("TokenType_InvalidType", resourceCulture);
             }
         }
     }
