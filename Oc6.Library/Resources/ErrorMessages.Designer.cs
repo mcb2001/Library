@@ -70,6 +70,15 @@ namespace Oc6.Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Function [{0}] is unknown.
+        /// </summary>
+        internal static string State_UnknownFunction {
+            get {
+                return ResourceManager.GetString("State_UnknownFunction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Only single character number formats are acceptable.
         /// </summary>
         internal static string Tokenizer_Only_SingleCharacterNumberFormats {

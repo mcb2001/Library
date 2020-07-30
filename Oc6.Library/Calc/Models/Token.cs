@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oc6.Library.Calculator.Models
+namespace Oc6.Library.Calc.Models
 {
     internal class Token
     {
-        public TokenType TokenType { get; set; }
+        public TokenType TokenType { get; }
+        public Expression<Func<decimal>> Expression { get; set; }
 
         private readonly int start;
         private readonly int length;

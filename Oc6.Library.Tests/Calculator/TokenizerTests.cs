@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oc6.Library.Calculator;
-using Oc6.Library.Calculator.Models;
+using Oc6.Library.Calc;
+using Oc6.Library.Calc.Models;
+using System;
 using System.Globalization;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Oc6.Library.Tests.Calculator
 {
@@ -22,16 +24,16 @@ namespace Oc6.Library.Tests.Calculator
             string x7 = ")";
             string input = x0 + x1 + x2 + x3 + x4 + x5 + x6 + x7;
 
-            Tokenizer tokenizer = new Tokenizer();
+            Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
             Assert.AreEqual<int>(8, tokens.Count);
 
             AssertToken(tokens[0], TokenType.Number, x0);
-            AssertToken(tokens[1], TokenType.Plus, x1);
+            AssertToken(tokens[1], TokenType.Add, x1);
             AssertToken(tokens[2], TokenType.Number, x2);
-            AssertToken(tokens[3], TokenType.Minus, x3);
+            AssertToken(tokens[3], TokenType.Subtract, x3);
             AssertToken(tokens[4], TokenType.Word, x4);
             AssertToken(tokens[5], TokenType.ParanthesisOpen, x5);
             AssertToken(tokens[6], TokenType.Number, x6);
@@ -46,15 +48,36 @@ namespace Oc6.Library.Tests.Calculator
             string c = "2.0";
             string input = a + b + c;
 
-            Tokenizer tokenizer = new Tokenizer();
+            Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
             Assert.AreEqual<int>(3, tokens.Count);
 
             AssertToken(tokens[0], TokenType.Number, a);
-            AssertToken(tokens[1], TokenType.Plus, b);
+            AssertToken(tokens[1], TokenType.Add, b);
             AssertToken(tokens[2], TokenType.Number, c);
+        }
+
+        [TestMethod]
+        public void GetTokens_Number_Plus_NegativeNumber_DefaultCulture()
+        {
+            string a = "1";
+            string b = "+";
+            string c = "-";
+            string d = "2.0";
+            string input = a + b + c+d;
+
+            Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
+            var enumerable = tokenizer.GetTokens(input.ToCharArray());
+            var tokens = enumerable.ToList();
+
+            Assert.AreEqual<int>(4, tokens.Count);
+
+            AssertToken(tokens[0], TokenType.Number, a);
+            AssertToken(tokens[1], TokenType.Add, b);
+            AssertToken(tokens[2], TokenType.UnaryMinus, c);
+            AssertToken(tokens[3], TokenType.Number, d);
         }
 
         [TestMethod]
@@ -97,6 +120,26 @@ namespace Oc6.Library.Tests.Calculator
             Assert.AreEqual<int>(1, tokens.Count);
 
             AssertToken(tokens[0], TokenType.Number, input);
+        }
+
+        [TestMethod]
+        public void Test_Expression()
+        {
+            Span<int> span = new int[] { 0, 1, 2, 3, 4, 5 };
+
+            int index = 3;
+
+            var left = span[..index];
+            var right = span[(index + 1)..];
+
+            Assert.AreEqual(3, left.Length);
+            Assert.AreEqual(0, left[0]);
+            Assert.AreEqual(1, left[1]);
+            Assert.AreEqual(2, left[2]);
+
+            Assert.AreEqual(2, right.Length);
+            Assert.AreEqual(4, right[0]);
+            Assert.AreEqual(5, right[1]);
         }
 
         private void AssertToken(Token token, TokenType type, string input)

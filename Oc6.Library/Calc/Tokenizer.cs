@@ -1,4 +1,4 @@
-﻿using Oc6.Library.Calculator.Models;
+﻿using Oc6.Library.Calc.Models;
 using Oc6.Library.Resources;
 using System;
 using System.Collections.Generic;
@@ -7,18 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oc6.Library.Calculator
+namespace Oc6.Library.Calc
 {
     internal sealed class Tokenizer
     {
         private readonly char numberDecimalSeparator;
         private readonly char numberGroupSeparator;
-
-        public Tokenizer()
-            : this(CultureInfo.InvariantCulture)
-        {
-
-        }
 
         public Tokenizer(CultureInfo cultureInfo)
         {
@@ -56,12 +50,12 @@ namespace Oc6.Library.Calculator
                 {
                     case '+':
                         {
-                            yield return new Token(TokenType.Plus, input, i, 1);
+                            yield return new Token(TokenType.Add, input, i, 1);
                             break;
                         }
                     case '-':
                         {
-                            yield return new Token(TokenType.Minus, input, i, 1);
+                            yield return ParseMinus(input, ref i);
                             break;
                         }
                     case '*':
@@ -89,11 +83,6 @@ namespace Oc6.Library.Calculator
                             yield return new Token(TokenType.ParanthesisClose, input, i, 1);
                             break;
                         }
-                    case '=':
-                        {
-                            yield return new Token(TokenType.ParanthesisClose, input, i, 1);
-                            break;
-                        }
                     default:
                         {
                             yield return GetToken(input, ref i);
@@ -104,6 +93,29 @@ namespace Oc6.Library.Calculator
                         }
                 }
             }
+        }
+
+        private static Token ParseMinus(char[] input, ref int i)
+        {
+            if (i == 0)
+            {
+                return new Token(TokenType.UnaryMinus, input, i, 1);
+            }
+
+            switch (input[i - 1])
+            {
+                case '+':
+                case '-':
+                case '*':
+                case '/':
+                case '^':
+                case '(':
+                    {
+                        return new Token(TokenType.UnaryMinus, input, i, 1);
+                    }
+            }
+
+            return new Token(TokenType.Subtract, input, i, 1);
         }
 
         private Token GetToken(char[] input, ref int i)
