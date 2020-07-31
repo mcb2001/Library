@@ -8,62 +8,118 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Maths
 {
+    /// <summary>
+    /// <para>Defines a Fraction as the differene between a numerator and a denominator.</para>
+    /// <para>This is equivalent to a rational in mathematics: r=p/q, where p,q ε ℤ</para>
+    /// </summary>
     public struct Fraction : IComparable<Fraction>, IEquatable<Fraction>
     {
         private const char DIVIDER = '/';
 
+        /// <summary>
+        /// The numerator
+        /// </summary>
         public long Numerator { get; set; }
 
+        /// <summary>
+        /// The denominator
+        /// </summary>
         public long Denominator { get; set; }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given denominator and numerator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num">The numerator</param>
+        /// <param name="den">The denominator</param>
         public Fraction(long num, long den)
         {
             Numerator = num;
             Denominator = den;
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(sbyte num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(byte num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(short num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(ushort num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(int num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(uint num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(long num)
             : this(num, 1)
         {
 
         }
 
+        /// <summary>
+        /// <para>Creates a new <see cref="Fraction"/> with the given numerator and 1 as denominator.</para>
+        /// <para>The <see cref="Fraction"/> is not guaranteed to be simplified.</para>
+        /// </summary>
+        /// <param name="num"></param>
         public Fraction(ulong num)
         {
             if (num > long.MaxValue)
@@ -75,6 +131,11 @@ namespace Oc6.Library.Maths
             Denominator = 1;
         }
 
+        /// <summary>
+        /// Compares this <see cref="Fraction"/> to another <see cref="Fraction"/> by numeric value.
+        /// </summary>
+        /// <param name="other">The <see cref="Fraction"/> to compare to</param>
+        /// <returns></returns>
         public int CompareTo(Fraction other)
         {
             Fraction a = Simplify(this);
@@ -93,18 +154,32 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// Generates a hashcode from <see cref="Fraction.Denominator"/> and <see cref="Fraction.Numerator"/>
+        /// </summary>
+        /// <returns>The hashcode for this <see cref="Fraction"/></returns>
         public override int GetHashCode()
         {
             return HashCode.Combine(this.Numerator, this.Denominator);
         }
 
+        /// <summary>
+        /// Converts a <see cref="Fraction"/> to a <see cref="double"/>
+        /// </summary>
+        /// <param name="f">The fraction to convert</param>
         public static implicit operator double(Fraction f)
         {
             return ToDouble(f);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="f"></param>
+        /// <returns></returns>
         public static double ToDouble(Fraction f)
         {
+            f = Simplify(f);
             double num = f.Numerator;
             double den = f.Denominator;
             return num / den;

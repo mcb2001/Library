@@ -28,16 +28,17 @@ namespace Oc6.Library.Tests.Maths
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
-            Assert.AreEqual<int>(8, tokens.Count);
+            Assert.AreEqual<int>(9, tokens.Count);
 
             AssertToken(tokens[0], TokenType.Number, x0);
             AssertToken(tokens[1], TokenType.Add, x1);
             AssertToken(tokens[2], TokenType.Number, x2);
-            AssertToken(tokens[3], TokenType.Subtract, x3);
-            AssertToken(tokens[4], TokenType.Word, x4);
-            AssertToken(tokens[5], TokenType.ParanthesisOpen, x5);
-            AssertToken(tokens[6], TokenType.Number, x6);
-            AssertToken(tokens[7], TokenType.ParanthesisClose, x7);
+            AssertToken(tokens[3], TokenType.Add, x3);
+            AssertToken(tokens[4], TokenType.Negate, x3);
+            AssertToken(tokens[5], TokenType.Word, x4);
+            AssertToken(tokens[6], TokenType.ParanthesisOpen, x5);
+            AssertToken(tokens[7], TokenType.Number, x6);
+            AssertToken(tokens[8], TokenType.ParanthesisClose, x7);
         }
 
         [TestMethod]
@@ -76,7 +77,7 @@ namespace Oc6.Library.Tests.Maths
 
             AssertToken(tokens[0], TokenType.Number, a);
             AssertToken(tokens[1], TokenType.Add, b);
-            AssertToken(tokens[2], TokenType.UnaryMinus, c);
+            AssertToken(tokens[2], TokenType.Negate, c);
             AssertToken(tokens[3], TokenType.Number, d);
         }
 

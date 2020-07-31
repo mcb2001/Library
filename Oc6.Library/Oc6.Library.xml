@@ -94,6 +94,44 @@
             Fisher-Yates shuffles any <see cref="T:System.Memory`1"/>
             </summary>
         </member>
+        <member name="T:Oc6.Library.Maths.DecimalMath">
+            <summary>
+            Defines mathematical functions for decimals, similar to <see cref="T:System.Math"/>
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.DecimalMath.PI">
+            <summary>
+            <para>The value of Pi to max digits</para>
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.DecimalMath.TAU">
+            <summary>
+            <para>The value of Tau to max digits</para>
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Pow(System.Decimal,System.Decimal)">
+            <summary>
+            <para>Calculates the value of a^b using the identity:</para>
+            <para>a^b = e^(ln(a)*b)</para>
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Oc6.Library.Maths.DoubleMath">
+            <summary>
+            Adds additional functionality to <see cref="T:System.Math"/>
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.DoubleMath.Root(System.Double,System.Int32)">
+            <summary>
+            <para>Defines root as a function</para>
+            <para>i.e. Root(100, 2) = 10 and Root(8, 3) == 2</para>
+            </summary>
+            <param name="value">The value to take the root of</param>
+            <param name="root">The root to apply</param>
+            <returns>The root of the value</returns>
+        </member>
         <member name="T:Oc6.Library.Resources.ErrorMessages">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -115,6 +153,41 @@
               Looks up a localized string similar to [{0}] must be smaller than [{1}].
             </summary>
         </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.MustBePositive">
+            <summary>
+              Looks up a localized string similar to Must be positive.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.NeedsOneNonZeroValue">
+            <summary>
+              Looks up a localized string similar to At least one parameter must be non-zero.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.NoArguments">
+            <summary>
+              Looks up a localized string similar to No arguments found.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.NonZero">
+            <summary>
+              Looks up a localized string similar to Cannot be 0.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.Parser_InvalidNumber">
+            <summary>
+              Looks up a localized string similar to Invalid Number [{0}].
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.Parser_InvalidTokenType">
+            <summary>
+              Looks up a localized string similar to Invalid TokenType [{0}].
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.Parser_InvalidVariable">
+            <summary>
+              Looks up a localized string similar to Invalid Variable [{0}].
+            </summary>
+        </member>
         <member name="P:Oc6.Library.Resources.ErrorMessages.State_UnknownFunction">
             <summary>
               Looks up a localized string similar to Function [{0}] is unknown.
@@ -123,6 +196,11 @@
         <member name="P:Oc6.Library.Resources.ErrorMessages.Tokenizer_Only_SingleCharacterNumberFormats">
             <summary>
               Looks up a localized string similar to Only single character number formats are acceptable.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.TokenType_InvalidType">
+            <summary>
+              Looks up a localized string similar to Invalid type.
             </summary>
         </member>
     </members>

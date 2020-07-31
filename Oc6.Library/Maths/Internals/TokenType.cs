@@ -13,7 +13,7 @@ namespace Oc6.Library.Maths.Internals
 
         Nop = 2,                // No-Operation
         Add = 3,                // '+'
-        Subtract = 4,           // '-'
+        //Subtract = 4,           // '-'
         Multiply = 5,           // '*'
         Divide = 6,             // '/'
         Power = 7,              // '^'
@@ -23,7 +23,7 @@ namespace Oc6.Library.Maths.Internals
         ParanthesisOpen = 9,    // '('
         ParanthesisClose = 10,  // ')'
 
-        UnaryMinus = 11,        // '-',
+        Negate = 11,        // '-',
     }
 
     internal static class TokenTypeExtensions
@@ -32,13 +32,13 @@ namespace Oc6.Library.Maths.Internals
         {
             return tokenType == TokenType.Nop
                 || tokenType == TokenType.Add
-                || tokenType == TokenType.Subtract
+                //|| tokenType == TokenType.Subtract
                 || tokenType == TokenType.Multiply
                 || tokenType == TokenType.Divide
                 || tokenType == TokenType.Power;
         }
 
-        public static bool HasHigherPrecedenceThan(this TokenType that, TokenType other)
+        public static bool HasLowerPrecedenceThan(this TokenType that, TokenType other)
         {
             if (!that.IsOperator())
             {
@@ -53,7 +53,7 @@ namespace Oc6.Library.Maths.Internals
             int l = (int)that;
             int r = (int)other;
 
-            return l > r;
+            return l < r;
         }
     }
 }

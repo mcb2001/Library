@@ -54,7 +54,13 @@ namespace Oc6.Library.Maths.Internals
                         }
                     case '-':
                         {
-                            yield return ParseMinus(input, ref i);
+                            if (IsBinarySubtrackt(input, i))
+                            {
+                                yield return new Token(TokenType.Add, input, i, 1);
+                            }
+
+                            yield return new Token(TokenType.Negate, input, i, 1);
+
                             break;
                         }
                     case '*':
@@ -94,11 +100,11 @@ namespace Oc6.Library.Maths.Internals
             }
         }
 
-        private static Token ParseMinus(char[] input, ref int i)
+        private static bool IsBinarySubtrackt(char[] input, int i)
         {
             if (i == 0)
             {
-                return new Token(TokenType.UnaryMinus, input, i, 1);
+                return false;
             }
 
             switch (input[i - 1])
@@ -110,11 +116,11 @@ namespace Oc6.Library.Maths.Internals
                 case '^':
                 case '(':
                     {
-                        return new Token(TokenType.UnaryMinus, input, i, 1);
+                        return false;
                     }
             }
 
-            return new Token(TokenType.Subtract, input, i, 1);
+            return true;
         }
 
         private Token GetToken(char[] input, ref int i)

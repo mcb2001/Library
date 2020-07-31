@@ -7,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Maths
 {
+    /// <summary>
+    /// Adds additional functionality to <see cref="System.Math"/>
+    /// </summary>
     public static class DoubleMath
     {
+        /// <summary>
+        /// <para>Defines root as a function</para>
+        /// <para>i.e. Root(100, 2) = 10 and Root(8, 3) == 2</para>
+        /// </summary>
+        /// <param name="value">The value to take the root of</param>
+        /// <param name="root">The root to apply</param>
+        /// <returns>The root of the value</returns>
         public static double Root(double value, int root)
         {
             if (IntegerMath.IsPowerOfTwo(root) && value < 0.0)

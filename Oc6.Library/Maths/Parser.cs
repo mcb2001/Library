@@ -90,7 +90,7 @@ namespace Oc6.Library.Maths
                 case TokenType.Add:
                 case TokenType.Divide:
                 case TokenType.Multiply:
-                case TokenType.Subtract:
+                //case TokenType.Subtract:
                 case TokenType.Power:
                     {
                         Binary(operandStack, operatorStack, type);
@@ -103,15 +103,13 @@ namespace Oc6.Library.Maths
 
                         return;
                     }
-                case TokenType.ParanthesisClose:
-                    {
-                        throw new NotImplementedException();
-                    }
                 case TokenType.ParanthesisOpen:
                     {
-                        throw new NotImplementedException();
+                        operandStack.Push(ParseParanthesis(tokens, ref i));
+
+                        return;
                     }
-                case TokenType.UnaryMinus:
+                case TokenType.Negate:
                     {
                         ++i;
                         token = tokens[i];
@@ -134,6 +132,32 @@ namespace Oc6.Library.Maths
             }
 
             throw new ParseException(string.Format(CultureInfo.InvariantCulture, ErrorMessages.Parser_InvalidTokenType, type));
+        }
+
+        private Expression ParseParanthesis(Span<Token> tokens, ref int i)
+        {
+            int start = i;
+            int end = start + 1;
+
+            int open = 1;
+
+            while (open > 0)
+            {
+                if (tokens[end].TokenType == TokenType.ParanthesisOpen)
+                {
+                    ++open;
+                }
+                else if (tokens[end].TokenType == TokenType.ParanthesisClose)
+                {
+                    --open;
+                }
+
+                ++end;
+            }
+
+            i = end - 1;
+
+            return Parse(tokens.Slice(start + 1, end - start - 2));
         }
 
         private static void PopAndApply(Stack<Expression> operandStack, Stack<TokenType> operatorStack)
@@ -160,11 +184,11 @@ namespace Oc6.Library.Maths
                         operandStack.Push(Expression.Multiply(left, right));
                         return;
                     }
-                case TokenType.Subtract:
-                    {
-                        operandStack.Push(Expression.Subtract(left, right));
-                        return;
-                    }
+                //case TokenType.Subtract:
+                //    {
+                //        operandStack.Push(Expression.Subtract(left, right));
+                //        return;
+                //    }
                 case TokenType.Power:
                     {
                         operandStack.Push(Expression.Call(PowMethod, left, right));
@@ -175,13 +199,13 @@ namespace Oc6.Library.Maths
 
         private static void Binary(Stack<Expression> operandStack, Stack<TokenType> operatorStack, TokenType type)
         {
-            if (type.HasHigherPrecedenceThan(operatorStack.Peek()))
+            if (type.HasLowerPrecedenceThan(operatorStack.Peek()))
             {
-                operatorStack.Push(type);
+                PopAndApply(operandStack, operatorStack);
             }
             else
             {
-                PopAndApply(operandStack, operatorStack);
+                operatorStack.Push(type);
             }
         }
 

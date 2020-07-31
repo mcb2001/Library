@@ -22,7 +22,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\Users\Marc\source\repos\oc6\Oc6.Library\Oc6.Library\Oc6.Library.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
