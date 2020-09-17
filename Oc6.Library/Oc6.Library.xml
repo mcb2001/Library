@@ -132,6 +132,112 @@
             <param name="root">The root to apply</param>
             <returns>The root of the value</returns>
         </member>
+        <member name="T:Oc6.Library.Maths.Fraction">
+            <summary>
+            <para>Defines a Fraction as the differene between a numerator and a denominator.</para>
+            <para>This is equivalent to a rational in mathematics: r=p/q, where p,q ε ℤ</para>
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Maths.Fraction.Numerator">
+            <summary>
+            The numerator
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Maths.Fraction.Denominator">
+            <summary>
+            The denominator
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.Int64,System.Int64)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given denominator and numerator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num">The numerator</param>
+            <param name="den">The denominator</param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.SByte)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.Byte)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.Int16)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.UInt16)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.Int32)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.UInt32)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.Int64)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.#ctor(System.UInt64)">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Maths.Fraction"/> with the given numerator and 1 as denominator.</para>
+            <para>The <see cref="T:Oc6.Library.Maths.Fraction"/> is not guaranteed to be simplified.</para>
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.CompareTo(Oc6.Library.Maths.Fraction)">
+            <summary>
+            Compares this <see cref="T:Oc6.Library.Maths.Fraction"/> to another <see cref="T:Oc6.Library.Maths.Fraction"/> by numeric value.
+            </summary>
+            <param name="other">The <see cref="T:Oc6.Library.Maths.Fraction"/> to compare to</param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.GetHashCode">
+            <summary>
+            Generates a hashcode from <see cref="P:Oc6.Library.Maths.Fraction.Denominator"/> and <see cref="P:Oc6.Library.Maths.Fraction.Numerator"/>
+            </summary>
+            <returns>The hashcode for this <see cref="T:Oc6.Library.Maths.Fraction"/></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(Oc6.Library.Maths.Fraction)~System.Double">
+            <summary>
+            Converts a <see cref="T:Oc6.Library.Maths.Fraction"/> to a <see cref="T:System.Double"/>
+            </summary>
+            <param name="f">The fraction to convert</param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToDouble(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="f"></param>
+            <returns></returns>
+        </member>
         <member name="T:Oc6.Library.Resources.ErrorMessages">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.

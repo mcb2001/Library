@@ -2,6 +2,7 @@
 using Oc6.Library.Maths;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -71,6 +72,18 @@ namespace Oc6.Library.Tests.Maths
             decimal expected = 202.0M;
 
             decimal actual = parser.Evaluate("M+2");
+
+            Assert.AreEqual<decimal>(expected, actual);
+        }
+
+        [TestMethod]
+        public void Evaluate_ErrorProne()
+        {
+            Parser parser = new Parser(CultureInfo.GetCultureInfo("da-DK"));
+
+            decimal expected = 0.0437609211829063596253579438M;
+
+            decimal actual = parser.Evaluate("(1+4,290698690388/1200)^12-1");
 
             Assert.AreEqual<decimal>(expected, actual);
         }

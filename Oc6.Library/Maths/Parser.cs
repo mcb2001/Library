@@ -203,10 +203,8 @@ namespace Oc6.Library.Maths
             {
                 PopAndApply(operandStack, operatorStack);
             }
-            else
-            {
-                operatorStack.Push(type);
-            }
+
+            operatorStack.Push(type);
         }
 
         private Expression ParseNumber(Token token)
