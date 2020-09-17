@@ -11,14 +11,14 @@
     <PackageProjectUrl>https://github.com/mcb2001/Oc6.Library</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mcb2001/Oc6.Library</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <AssemblyVersion>1.0.0.4</AssemblyVersion>
-    <FileVersion>1.0.0.4</FileVersion>
-    <Version>1.0.0.4</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0.0</Version>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\Users\Marc\source\repos\oc6\Oc6.Library\Oc6.Library\Oc6.Library.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

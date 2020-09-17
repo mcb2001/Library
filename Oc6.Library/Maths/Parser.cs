@@ -90,7 +90,6 @@ namespace Oc6.Library.Maths
                 case TokenType.Add:
                 case TokenType.Divide:
                 case TokenType.Multiply:
-                //case TokenType.Subtract:
                 case TokenType.Power:
                     {
                         Binary(operandStack, operatorStack, type);
@@ -184,11 +183,6 @@ namespace Oc6.Library.Maths
                         operandStack.Push(Expression.Multiply(left, right));
                         return;
                     }
-                //case TokenType.Subtract:
-                //    {
-                //        operandStack.Push(Expression.Subtract(left, right));
-                //        return;
-                //    }
                 case TokenType.Power:
                     {
                         operandStack.Push(Expression.Call(PowMethod, left, right));
