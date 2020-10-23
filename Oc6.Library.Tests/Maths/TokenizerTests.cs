@@ -67,7 +67,7 @@ namespace Oc6.Library.Tests.Maths
             string b = "+";
             string c = "-";
             string d = "2.0";
-            string input = a + b + c+d;
+            string input = a + b + c + d;
 
             Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
