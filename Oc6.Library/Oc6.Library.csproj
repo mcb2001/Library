@@ -18,11 +18,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\Marc\source\repos\oc6\Oc6.Library\Oc6.Library\Oc6.Library.xml</DocumentationFile>
+    <DocumentationFile>Oc6.Library.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Marc\source\repos\oc6\Oc6.Library\Oc6.Library\Oc6.Library.xml</DocumentationFile>
+    <DocumentationFile>Oc6.Library.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

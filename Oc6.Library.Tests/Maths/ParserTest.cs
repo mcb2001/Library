@@ -135,16 +135,5 @@ namespace Oc6.Library.Tests.Maths
 
             Assert.AreEqual<decimal>(expected, actual);
         }
-
-        [TestMethod]
-        public async Task TestSmtp()
-        {
-            await new SmtpClient("smtp.office365.com", 587)
-            {
-                Credentials = new NetworkCredential("help@leneo.io", "iZdy-,s5apbsp6Nyhwsw"),
-                EnableSsl = true,
-            }
-            .SendMailAsync("help@leneo.io", "kju@leneo.io,k@kju.dk,marc@barnholdt.net", "test of e-mail", "this is an actual test e-mail");
-        }
     }
 }
