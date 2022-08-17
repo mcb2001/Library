@@ -88,6 +88,15 @@ namespace Oc6.Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid state.
+        /// </summary>
+        internal static string InvalidState {
+            get {
+                return ResourceManager.GetString("InvalidState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Must be positive.
         /// </summary>
         internal static string MustBePositive {

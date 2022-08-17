@@ -16,7 +16,7 @@ namespace Oc6.Library.Crypto
     /// </summary>
     public sealed class CryptoRandomNumberGenerator : IDisposable, ICryptoRandomNumberGenerator
     {
-        private readonly object syncRoot = new object();
+        private readonly object syncRoot = new();
         private readonly RandomNumberGenerator randomNumberGenerator;
         private readonly bool shouldDispose;
 

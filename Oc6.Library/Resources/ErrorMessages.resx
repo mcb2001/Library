@@ -126,6 +126,9 @@
   <data name="InvalidMask" xml:space="preserve">
     <value>Invalid mask</value>
   </data>
+  <data name="InvalidState" xml:space="preserve">
+    <value>Invalid state</value>
+  </data>
   <data name="MustBePositive" xml:space="preserve">
     <value>Must be positive</value>
   </data>

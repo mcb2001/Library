@@ -61,7 +61,7 @@ namespace Oc6.Library.Net
             Address = addressBytes;
             Mask = mask;
 
-            List<char> chars = new List<char>(Address.Length * 8);
+            List<char> chars = new(Address.Length * 8);
 
             foreach (var value in Address)
             {

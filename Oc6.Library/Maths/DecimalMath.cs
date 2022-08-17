@@ -78,6 +78,11 @@ namespace Oc6.Library.Maths
             return t;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static decimal Exp(decimal a)
         {
             decimal x = a;
@@ -100,6 +105,11 @@ namespace Oc6.Library.Maths
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static decimal Log(decimal a)
         {
             decimal x = a - 1;
@@ -122,11 +132,23 @@ namespace Oc6.Library.Maths
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static decimal Sqrt(decimal value)
         {
             return Root(value, 2);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static decimal Root(decimal value, long root)
         {
             if (IntegerMath.IsPowerOfTwo(root) && value < 0.0M)
@@ -148,6 +170,11 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="angle"></param>
+        /// <returns></returns>
         public static decimal Sin(decimal angle)
         {
             decimal frac = angle;
@@ -172,12 +199,23 @@ namespace Oc6.Library.Maths
             return Math.Max(-1.0M, Math.Min(1.0M, sum));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="angle"></param>
+        /// <returns></returns>
         public static decimal Cos(decimal angle)
         {
             //cosine is just offset sine
             return DecimalMath.Sin((DecimalMath.PI / 2.0M) - angle);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="angle"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static decimal Tan(decimal angle)
         {
             decimal denominator = DecimalMath.Cos(angle);

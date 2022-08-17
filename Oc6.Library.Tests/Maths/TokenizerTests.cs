@@ -24,7 +24,7 @@ namespace Oc6.Library.Tests.Maths
             string x7 = ")";
             string input = x0 + x1 + x2 + x3 + x4 + x5 + x6 + x7;
 
-            Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
+            Tokenizer tokenizer = new(CultureInfo.InvariantCulture);
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
@@ -49,7 +49,7 @@ namespace Oc6.Library.Tests.Maths
             string c = "2.0";
             string input = a + b + c;
 
-            Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
+            Tokenizer tokenizer = new(CultureInfo.InvariantCulture);
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
@@ -69,7 +69,7 @@ namespace Oc6.Library.Tests.Maths
             string d = "2.0";
             string input = a + b + c + d;
 
-            Tokenizer tokenizer = new Tokenizer(CultureInfo.InvariantCulture);
+            Tokenizer tokenizer = new(CultureInfo.InvariantCulture);
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
@@ -86,7 +86,7 @@ namespace Oc6.Library.Tests.Maths
         {
             string input = "2,0";
 
-            Tokenizer tokenizer = new Tokenizer(CultureInfo.GetCultureInfo("da-DK"));
+            Tokenizer tokenizer = new(CultureInfo.GetCultureInfo("da-DK"));
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
@@ -100,7 +100,7 @@ namespace Oc6.Library.Tests.Maths
         {
             string input = "ThisIsAMethod";
 
-            Tokenizer tokenizer = new Tokenizer(CultureInfo.GetCultureInfo("da-DK"));
+            Tokenizer tokenizer = new(CultureInfo.GetCultureInfo("da-DK"));
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 
@@ -114,7 +114,7 @@ namespace Oc6.Library.Tests.Maths
         {
             string input = "1.000.000,00";
 
-            Tokenizer tokenizer = new Tokenizer(CultureInfo.GetCultureInfo("da-DK"));
+            Tokenizer tokenizer = new(CultureInfo.GetCultureInfo("da-DK"));
             var enumerable = tokenizer.GetTokens(input.ToCharArray());
             var tokens = enumerable.ToList();
 

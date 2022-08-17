@@ -2828,6 +2828,58 @@
             <param name="b"></param>
             <returns></returns>
         </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Exp(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Log(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Sqrt(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Root(System.Decimal,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="root"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Sin(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Cos(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Tan(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Oc6.Library.Maths.DoubleMath">
             <summary>
             Adds additional functionality to <see cref="T:System.Math"/>
@@ -2948,6 +3000,959 @@
             <param name="f"></param>
             <returns></returns>
         </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.SByte)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Byte)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Int16)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.UInt16)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Int32)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.UInt32)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Int64)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.UInt64)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.SByte)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Equality(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Inequality(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_LessThan(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_LessThanOrEqual(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_GreaterThan(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_GreaterThanOrEqual(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_UnaryNegation(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Negate(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Increment(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Increment(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Decrement(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Decrement(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_UnaryPlus(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Plus(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Addition(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Add(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Subtraction(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Subtract(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Multiply(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Multiply(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Division(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Divide(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.IsSimplified(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="fraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Simplify(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="fraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Normalize(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="fraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@,System.Globalization.NumberStyles)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <param name="style"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String,System.Globalization.NumberStyles)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="style"></param>
+            <param name="provider"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString(System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Equals(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Oc6.Library.Maths.IntegerMath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Numerics.BigInteger[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int32[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int64[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Numerics.BigInteger,System.Numerics.BigInteger)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int32[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int64[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Numerics.BigInteger[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.SByte)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Numerics.BigInteger)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.SByte)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.SignedSqrtInternal(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Oc6.Library.Maths.IterationsExceededException`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Oc6.Library.Maths.IterationsExceededException`1.LastValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.IterationsExceededException`1.#ctor(`0)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:Oc6.Library.Maths.LoanFunctions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Rate(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Rate(System.Int32,System.Decimal,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Periods(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="presentValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Periods(System.Decimal,System.Decimal,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="presentValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.MonthlyPayment(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.MonthlyPayment(System.Decimal,System.Int32,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.PresentValue(System.Double,System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="elapsedPeriods"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.PresentValue(System.Decimal,System.Int32,System.Int32,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="elapsedPeriods"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.FutureValue(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="rate"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.FutureValue(System.Int32,System.Decimal,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="rate"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Oc6.Library.Maths.NewtonRaphson">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.NewtonRaphson.DefaultIterations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.NewtonRaphson.DefaultGuess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.NewtonRaphson.DefaultRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Numerics.Complex,System.Numerics.Complex},System.Func{System.Numerics.Complex,System.Numerics.Complex},System.Nullable{System.Numerics.Complex},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Decimal,System.Decimal},System.Func{System.Decimal,System.Decimal},System.Decimal,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Double,System.Double},System.Func{System.Double,System.Double},System.Double,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Numerics.BigInteger,System.Numerics.BigInteger},System.Func{System.Numerics.BigInteger,System.Numerics.BigInteger},System.Nullable{System.Numerics.BigInteger},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Single,System.Single},System.Func{System.Single,System.Single},System.Single,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Int32,System.Int32},System.Func{System.Int32,System.Int32},System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Int64,System.Int64},System.Func{System.Int64,System.Int64},System.Int64,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="T:Oc6.Library.Maths.ParseException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.ParseException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Oc6.Library.Maths.Parser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Maths.Parser.State">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.#ctor(System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="cultureInfo"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.Evaluate(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Oc6.Library.Maths.PaymentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.PaymentType.EndOfPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.PaymentType.BeginningOfPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Oc6.Library.Maths.State">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.State.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Maths.State.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="variable"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Oc6.Library.Maths.State.Variables">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Oc6.Library.Net.IpRange">
             <summary>
             Packs an IP range for easy overlap matching
@@ -3059,6 +4064,11 @@
         <member name="P:Oc6.Library.Resources.ErrorMessages.InvalidMask">
             <summary>
               Looks up a localized string similar to Invalid mask.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.InvalidState">
+            <summary>
+              Looks up a localized string similar to Invalid state.
             </summary>
         </member>
         <member name="P:Oc6.Library.Resources.ErrorMessages.MustBePositive">
