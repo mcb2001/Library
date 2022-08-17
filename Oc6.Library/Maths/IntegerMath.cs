@@ -8,8 +8,18 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Maths
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class IntegerMath
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static BigInteger GreatestCommonDivisor(params BigInteger[] values)
         {
             if (values == null)
@@ -48,6 +58,13 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static int GreatestCommonDivisor(params int[] values)
         {
             if (values == null)
@@ -86,6 +103,13 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static int GreatestCommonDivisor(int a, int b)
         {
             if (a < 0)
@@ -116,6 +140,13 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static long GreatestCommonDivisor(params long[] values)
         {
             if (values == null)
@@ -154,6 +185,13 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static long GreatestCommonDivisor(long a, long b)
         {
             if (a < 0)
@@ -184,21 +222,46 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static int LeastCommonMultiple(int a, int b)
         {
             return a * b / GreatestCommonDivisor(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static long LeastCommonMultiple(long a, long b)
         {
             return a * b / GreatestCommonDivisor(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static BigInteger LeastCommonMultiple(BigInteger a, BigInteger b)
         {
             return a * b / GreatestCommonDivisor(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static int LeastCommonMultiple(params int[] values)
         {
             if (values == null)
@@ -230,6 +293,13 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static long LeastCommonMultiple(params long[] values)
         {
             if (values == null)
@@ -261,6 +331,13 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public static BigInteger LeastCommonMultiple(params BigInteger[] values)
         {
             if (values == null)
@@ -292,11 +369,22 @@ namespace Oc6.Library.Maths
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static sbyte Sqrt(sbyte input)
         {
             return (sbyte)SignedSqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static byte Sqrt(byte input)
         {
             if (input < 0)
@@ -307,36 +395,72 @@ namespace Oc6.Library.Maths
             return (byte)SqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static short Sqrt(short input)
         {
             return (short)SignedSqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static ushort Sqrt(ushort input)
         {
             return (ushort)SqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static int Sqrt(int input)
         {
             return (int)SignedSqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static uint Sqrt(uint input)
         {
             return (uint)SqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static long Sqrt(long input)
         {
             return (long)SignedSqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static ulong Sqrt(ulong input)
         {
             return SqrtInternal(input);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static BigInteger Sqrt(BigInteger input)
         {
             if (input < 0)
@@ -384,46 +508,92 @@ namespace Oc6.Library.Maths
             return t - 1;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(sbyte x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(byte x)
         {
             return x > 0 && IsPowerOfTwoInternal(x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(short x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(ushort x)
         {
             return IsPowerOfTwoInternal(x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(int x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(uint x)
         {
             return IsPowerOfTwoInternal(x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(long x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         public static bool IsPowerOfTwo(ulong x)
         {
             return IsPowerOfTwoInternal(x);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         private static ulong SignedSqrtInternal(long input)
         {
             if (input < 0)

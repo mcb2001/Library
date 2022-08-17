@@ -120,6 +120,15 @@
   <data name="CryptoRandomNumberGenerator_MustBeOrdered" xml:space="preserve">
     <value>[{0}] must be smaller than [{1}]</value>
   </data>
+  <data name="InvalidAddressSize" xml:space="preserve">
+    <value>Invalid address size</value>
+  </data>
+  <data name="InvalidMask" xml:space="preserve">
+    <value>Invalid mask</value>
+  </data>
+  <data name="InvalidState" xml:space="preserve">
+    <value>Invalid state</value>
+  </data>
   <data name="MustBePositive" xml:space="preserve">
     <value>Must be positive</value>
   </data>

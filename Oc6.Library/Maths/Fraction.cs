@@ -185,121 +185,239 @@ namespace Oc6.Library.Maths
             return num / den;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(sbyte value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(byte value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(short value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(ushort value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(int value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(uint value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(long value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
         public static implicit operator Fraction(ulong value)
         {
             return ToFraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(sbyte value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(byte value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(short value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(ushort value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(int value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(uint value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(long value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction ToFraction(ulong value)
         {
             return new Fraction(value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static bool operator ==(Fraction a, Fraction b)
         {
             return a.CompareTo(b) == 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static bool operator !=(Fraction a, Fraction b)
         {
             return a.CompareTo(b) != 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static bool operator <(Fraction a, Fraction b)
         {
             return a.CompareTo(b) < 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static bool operator <=(Fraction a, Fraction b)
         {
             return a.CompareTo(b) <= 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static bool operator >(Fraction a, Fraction b)
         {
             return a.CompareTo(b) > 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static bool operator >=(Fraction a, Fraction b)
         {
             return a.CompareTo(b) >= 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction operator -(Fraction a)
         {
             return Negate(a);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction Negate(Fraction a)
         {
             a = Normalize(a);
@@ -310,31 +428,61 @@ namespace Oc6.Library.Maths
             return new Fraction(-num, den);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction operator ++(Fraction a)
         {
             return Increment(a);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction Increment(Fraction a)
         {
             return new Fraction(a.Numerator + 1, a.Denominator);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction operator --(Fraction a)
         {
             return Decrement(a);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction Decrement(Fraction a)
         {
             return new Fraction(a.Numerator - 1, a.Denominator);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction operator +(Fraction a)
         {
             return Plus(a);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Fraction Plus(Fraction a)
         {
             a = Normalize(a);
@@ -345,51 +493,109 @@ namespace Oc6.Library.Maths
             return new Fraction(Math.Abs(num), den);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction operator +(Fraction a, Fraction b)
         {
             return Add(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction Add(Fraction a, Fraction b)
         {
             return new Fraction((a.Numerator * b.Denominator) + (b.Numerator * a.Denominator), a.Denominator * b.Denominator);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction operator -(Fraction a, Fraction b)
         {
             return Subtract(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction Subtract(Fraction a, Fraction b)
         {
             return new Fraction((a.Numerator * b.Denominator) - (b.Numerator * a.Denominator), a.Denominator * b.Denominator);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction operator *(Fraction a, Fraction b)
         {
             return Multiply(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction Multiply(Fraction a, Fraction b)
         {
             return new Fraction(a.Numerator * b.Numerator, a.Denominator * b.Denominator);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction operator /(Fraction a, Fraction b)
         {
             return Divide(a, b);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static Fraction Divide(Fraction a, Fraction b)
         {
             return new Fraction(a.Numerator * b.Denominator, a.Denominator * b.Numerator);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fraction"></param>
+        /// <returns></returns>
         public static bool IsSimplified(Fraction fraction)
         {
             return IntegerMath.GreatestCommonDivisor(fraction.Numerator, fraction.Denominator) == 1;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fraction"></param>
+        /// <returns></returns>
         public static Fraction Simplify(Fraction fraction)
         {
             fraction = Normalize(fraction);
@@ -405,6 +611,11 @@ namespace Oc6.Library.Maths
             return new Fraction(num, den);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="fraction"></param>
+        /// <returns></returns>
         public static Fraction Normalize(Fraction fraction)
         {
             long num = fraction.Numerator;
@@ -423,23 +634,50 @@ namespace Oc6.Library.Maths
             return new Fraction(num, den);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="frac"></param>
+        /// <returns></returns>
         public static bool TryParse(string value, out Fraction frac)
         {
             return TryParse(value, out frac, style: default, provider: default);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="frac"></param>
+        /// <param name="style"></param>
+        /// <returns></returns>
         public static bool TryParse(string value, out Fraction frac, NumberStyles style)
         {
             return TryParse(value, out frac, style, provider: default);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="frac"></param>
+        /// <param name="provider"></param>
+        /// <returns></returns>
         public static bool TryParse(string value, out Fraction frac, IFormatProvider provider)
         {
             return TryParse(value, out frac, style: default, provider);
         }
 
-        [SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "Try/Catch used to actually be a TryParse pattern")]
-        public static bool TryParse(string value, out Fraction frac, NumberStyles style, IFormatProvider provider)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="frac"></param>
+        /// <param name="style"></param>
+        /// <param name="provider"></param>
+        /// <returns></returns>
+        public static bool TryParse(string value, out Fraction frac, NumberStyles style, IFormatProvider? provider)
         {
             if (value != null)
             {
@@ -466,22 +704,47 @@ namespace Oc6.Library.Maths
             return false;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static Fraction Parse(string value)
         {
             return Parse(value, style: default, provider: null);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="style"></param>
+        /// <returns></returns>
         public static Fraction Parse(string value, NumberStyles style)
         {
             return Parse(value, style, provider: null);
         }
 
-        public static Fraction Parse(string value, IFormatProvider provider)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="provider"></param>
+        /// <returns></returns>
+        public static Fraction Parse(string value, IFormatProvider? provider)
         {
             return Parse(value, style: default, provider);
         }
 
-        public static Fraction Parse(string value, NumberStyles style, IFormatProvider provider)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="style"></param>
+        /// <param name="provider"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static Fraction Parse(string value, NumberStyles style, IFormatProvider? provider)
         {
             if (value == null)
             {
@@ -499,7 +762,7 @@ namespace Oc6.Library.Maths
                 return new Fraction(num);
             }
 
-            string numString = value.Substring(0, index);
+            string numString = value[..index];
             string denString = value.Substring(index + 1, value.Length - index - 1);
 
             num = long.Parse(numString, style, provider);
@@ -508,27 +771,47 @@ namespace Oc6.Library.Maths
             return new Fraction(num, den);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return ToString(this, format: default, provider: default);
         }
 
-        public string ToString(string format)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="format"></param>
+        /// <returns></returns>
+        public string ToString(string? format)
         {
             return ToString(this, format, provider: default);
         }
 
-        public string ToString(IFormatProvider provider)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <returns></returns>
+        public string ToString(IFormatProvider? provider)
         {
             return ToString(this, format: default, provider);
         }
 
-        public string ToString(string format, IFormatProvider provider)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="format"></param>
+        /// <param name="provider"></param>
+        /// <returns></returns>
+        public string ToString(string? format, IFormatProvider? provider)
         {
             return ToString(this, format, provider);
         }
 
-        private static string ToString(Fraction fraction, string format, IFormatProvider provider)
+        private static string ToString(Fraction fraction, string? format, IFormatProvider? provider)
         {
             fraction = Normalize(fraction);
 
@@ -538,11 +821,21 @@ namespace Oc6.Library.Maths
             return den == 1 ? num.ToString(format, provider) : num.ToString(format, provider) + DIVIDER + den.ToString(format, provider);
         }
 
-        public override bool Equals(object obj)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object? obj)
         {
             return obj is Fraction other && Equals(other);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Fraction other)
         {
             return Numerator == other.Numerator && Denominator == other.Denominator;

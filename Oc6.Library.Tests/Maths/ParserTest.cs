@@ -18,7 +18,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_DefaultCulture()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = 1 + 2 + -3;
 
@@ -30,7 +30,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Negate()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = -1.0M;
 
@@ -42,7 +42,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Negate_Multi()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = -1.0M;
 
@@ -54,7 +54,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Power()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = 8.0M;
 
@@ -66,7 +66,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Value()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
             parser.State["M"] = 200.0M;
 
             decimal expected = 202.0M;
@@ -79,7 +79,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_ErrorProne()
         {
-            Parser parser = new Parser(CultureInfo.GetCultureInfo("da-DK"));
+            Parser parser = new(CultureInfo.GetCultureInfo("da-DK"));
 
             decimal expected = 0.0437609211829063596253579438M;
 
@@ -91,7 +91,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Full()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = 1.0M + 2.0M - (3.0M * 4.0M / 8.0M); // 8 = 2^3
 
@@ -103,7 +103,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Paranthesis_Right()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = 5;
 
@@ -115,7 +115,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Paranthesis_Left()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = 5;
 
@@ -127,7 +127,7 @@ namespace Oc6.Library.Tests.Maths
         [TestMethod]
         public void Evaluate_Paranthesis_Complex()
         {
-            Parser parser = new Parser();
+            Parser parser = new();
 
             decimal expected = (1.0M * (2.0M + 3.0M)) + (2.0M * (3.0M - 4.0M) / 5.0M) + 2.0M + (3.0M * 4.0M);
 

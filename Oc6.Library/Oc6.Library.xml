@@ -94,6 +94,11 @@
             Fisher-Yates shuffles any <see cref="T:System.Memory`1"/>
             </summary>
         </member>
+        <member name="T:Oc6.Library.Localization.CountryCode">
+            <summary>
+            Country code as defined by ISO
+            </summary>
+        </member>
         <member name="F:Oc6.Library.Localization.CountryCode.AX">
             <summary>
             <para>AalandIslands</para>
@@ -1294,6 +1299,696 @@
             <para>Zimbabwe</para>
             </summary>
         </member>
+        <member name="T:Oc6.Library.Localization.CultureCode">
+            <summary>
+            Default culture codes
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.af_ZA">
+             <summary>
+            Afrikaans - South Africa
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sq_AL">
+             <summary>
+            Albanian - Albania
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_DZ">
+             <summary>
+            Arabic - Algeria
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_BH">
+             <summary>
+            Arabic - Bahrain
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_EG">
+             <summary>
+            Arabic - Egypt
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_IQ">
+             <summary>
+            Arabic - Iraq
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_JO">
+             <summary>
+            Arabic - Jordan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_KW">
+             <summary>
+            Arabic - Kuwait
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_LB">
+             <summary>
+            Arabic - Lebanon
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_LY">
+             <summary>
+            Arabic - Libya
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_MA">
+             <summary>
+            Arabic - Morocco
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_OM">
+             <summary>
+            Arabic - Oman
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_QA">
+             <summary>
+            Arabic - Qatar
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_SA">
+             <summary>
+            Arabic - Saudi Arabia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_SY">
+             <summary>
+            Arabic - Syria
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_TN">
+             <summary>
+            Arabic - Tunisia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_AE">
+             <summary>
+            Arabic - United Arab Emirates
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ar_YE">
+             <summary>
+            Arabic - Yemen
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.hy_AM">
+             <summary>
+            Armenian - Armenia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.Cy_az_AZ">
+             <summary>
+            Azeri (Cyrillic) - Azerbaijan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.Lt_az_AZ">
+             <summary>
+            Azeri (Latin) - Azerbaijan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.eu_ES">
+             <summary>
+            Basque - Basque
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.be_BY">
+             <summary>
+            Belarusian - Belarus
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.bg_BG">
+             <summary>
+            Bulgarian - Bulgaria
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ca_ES">
+             <summary>
+            Catalan - Catalan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_CN">
+             <summary>
+            Chinese - China
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_HK">
+             <summary>
+            Chinese - Hong Kong SAR
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_MO">
+             <summary>
+            Chinese - Macau SAR
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_SG">
+             <summary>
+            Chinese - Singapore
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_TW">
+             <summary>
+            Chinese - Taiwan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_CHS">
+             <summary>
+            Chinese (Simplified)
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.zh_CHT">
+             <summary>
+            Chinese (Traditional)
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.hr_HR">
+             <summary>
+            Croatian - Croatia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.cs_CZ">
+             <summary>
+            Czech - Czech Republic
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.da_DK">
+             <summary>
+            Danish - Denmark
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.div_MV">
+             <summary>
+            Dhivehi - Maldives
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.nl_BE">
+             <summary>
+            Dutch - Belgium
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.nl_NL">
+             <summary>
+            Dutch - The Netherlands
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_AU">
+             <summary>
+            English - Australia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_BZ">
+             <summary>
+            English - Belize
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_CA">
+             <summary>
+            English - Canada
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_CB">
+             <summary>
+            English - Caribbean
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_IE">
+             <summary>
+            English - Ireland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_JM">
+             <summary>
+            English - Jamaica
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_NZ">
+             <summary>
+            English - New Zealand
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_PH">
+             <summary>
+            English - Philippines
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_ZA">
+             <summary>
+            English - South Africa
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_TT">
+             <summary>
+            English - Trinidad and Tobago
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_GB">
+             <summary>
+            English - United Kingdom
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_US">
+             <summary>
+            English - United States
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.en_ZW">
+             <summary>
+            English - Zimbabwe
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.et_EE">
+             <summary>
+            Estonian - Estonia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fo_FO">
+             <summary>
+            Faroese - Faroe Islands
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fa_IR">
+             <summary>
+            Farsi - Iran
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fi_FI">
+             <summary>
+            Finnish - Finland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fr_BE">
+             <summary>
+            French - Belgium
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fr_CA">
+             <summary>
+            French - Canada
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fr_FR">
+             <summary>
+            French - France
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fr_LU">
+             <summary>
+            French - Luxembourg
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fr_MC">
+             <summary>
+            French - Monaco
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.fr_CH">
+             <summary>
+            French - Switzerland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.gl_ES">
+             <summary>
+            Galician - Galician
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ka_GE">
+             <summary>
+            Georgian - Georgia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.de_AT">
+             <summary>
+            German - Austria
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.de_DE">
+             <summary>
+            German - Germany
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.de_LI">
+             <summary>
+            German - Liechtenstein
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.de_LU">
+             <summary>
+            German - Luxembourg
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.de_CH">
+             <summary>
+            German - Switzerland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.el_GR">
+             <summary>
+            Greek - Greece
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.gu_IN">
+             <summary>
+            Gujarati - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.he_IL">
+             <summary>
+            Hebrew - Israel
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.hi_IN">
+             <summary>
+            Hindi - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.hu_HU">
+             <summary>
+            Hungarian - Hungary
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.is_IS">
+             <summary>
+            Icelandic - Iceland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.id_ID">
+             <summary>
+            Indonesian - Indonesia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.it_IT">
+             <summary>
+            Italian - Italy
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.it_CH">
+             <summary>
+            Italian - Switzerland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ja_JP">
+             <summary>
+            Japanese - Japan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.kn_IN">
+             <summary>
+            Kannada - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.kk_KZ">
+             <summary>
+            Kazakh - Kazakhstan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.kok_IN">
+             <summary>
+            Konkani - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ko_KR">
+             <summary>
+            Korean - Korea
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ky_KZ">
+             <summary>
+            Kyrgyz - Kazakhstan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.lv_LV">
+             <summary>
+            Latvian - Latvia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.lt_LT">
+             <summary>
+            Lithuanian - Lithuania
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.mk_MK">
+             <summary>
+            Macedonian (FYROM)
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ms_BN">
+             <summary>
+            Malay - Brunei
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ms_MY">
+             <summary>
+            Malay - Malaysia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.mr_IN">
+             <summary>
+            Marathi - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.mn_MN">
+             <summary>
+            Mongolian - Mongolia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.nb_NO">
+             <summary>
+            Norwegian (Bokmål) - Norway
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.nn_NO">
+             <summary>
+            Norwegian (Nynorsk) - Norway
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.pl_PL">
+             <summary>
+            Polish - Poland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.pt_BR">
+             <summary>
+            Portuguese - Brazil
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.pt_PT">
+             <summary>
+            Portuguese - Portugal
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.pa_IN">
+             <summary>
+            Punjabi - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ro_RO">
+             <summary>
+            Romanian - Romania
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ru_RU">
+             <summary>
+            Russian - Russia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sa_IN">
+             <summary>
+            Sanskrit - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.Cy_sr_SP">
+             <summary>
+            Serbian (Cyrillic) - Serbia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.Lt_sr_SP">
+             <summary>
+            Serbian (Latin) - Serbia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sk_SK">
+             <summary>
+            Slovak - Slovakia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sl_SI">
+             <summary>
+            Slovenian - Slovenia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_AR">
+             <summary>
+            Spanish - Argentina
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_BO">
+             <summary>
+            Spanish - Bolivia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_CL">
+             <summary>
+            Spanish - Chile
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_CO">
+             <summary>
+            Spanish - Colombia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_CR">
+             <summary>
+            Spanish - Costa Rica
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_DO">
+             <summary>
+            Spanish - Dominican Republic
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_EC">
+             <summary>
+            Spanish - Ecuador
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_SV">
+             <summary>
+            Spanish - El Salvador
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_GT">
+             <summary>
+            Spanish - Guatemala
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_HN">
+             <summary>
+            Spanish - Honduras
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_MX">
+             <summary>
+            Spanish - Mexico
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_NI">
+             <summary>
+            Spanish - Nicaragua
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_PA">
+             <summary>
+            Spanish - Panama
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_PY">
+             <summary>
+            Spanish - Paraguay
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_PE">
+             <summary>
+            Spanish - Peru
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_PR">
+             <summary>
+            Spanish - Puerto Rico
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_ES">
+             <summary>
+            Spanish - Spain
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_UY">
+             <summary>
+            Spanish - Uruguay
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.es_VE">
+             <summary>
+            Spanish - Venezuela
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sw_KE">
+             <summary>
+            Swahili - Kenya
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sv_FI">
+             <summary>
+            Swedish - Finland
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.sv_SE">
+             <summary>
+            Swedish - Sweden
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.syr_SY">
+             <summary>
+            Syriac - Syria
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ta_IN">
+             <summary>
+            Tamil - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.tt_RU">
+             <summary>
+            Tatar - Russia
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.te_IN">
+             <summary>
+            Telugu - India
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.th_TH">
+             <summary>
+            Thai - Thailand
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.tr_TR">
+             <summary>
+            Turkish - Turkey
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.uk_UA">
+             <summary>
+            Ukrainian - Ukraine
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.ur_PK">
+             <summary>
+            Urdu - Pakistan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.Cy_uz_UZ">
+             <summary>
+            Uzbek (Cyrillic) - Uzbekistan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.Lt_uz_UZ">
+             <summary>
+            Uzbek (Latin) - Uzbekistan
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Localization.CultureCode.vi_VN">
+             <summary>
+            Vietnamese - Vietnam
+            </summary>
+        </member>
+        <member name="T:Oc6.Library.Localization.CurrencyCode">
+            <summary>
+            ISO currencies
+            </summary>
+        </member>
         <member name="F:Oc6.Library.Localization.CurrencyCode.AED">
             <summary>
             <para>UnitedArabEmiratesDirham</para>
@@ -2109,6 +2804,11 @@
             Defines mathematical functions for decimals, similar to <see cref="T:System.Math"/>
             </summary>
         </member>
+        <member name="F:Oc6.Library.Maths.DecimalMath.Factorials">
+            <summary>
+            First N factorials
+            </summary>
+        </member>
         <member name="F:Oc6.Library.Maths.DecimalMath.PI">
             <summary>
             <para>The value of Pi to max digits</para>
@@ -2127,6 +2827,58 @@
             <param name="a"></param>
             <param name="b"></param>
             <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Exp(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Log(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Sqrt(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Root(System.Decimal,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="root"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Sin(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Cos(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.DecimalMath.Tan(System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="angle"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
         <member name="T:Oc6.Library.Maths.DoubleMath">
             <summary>
@@ -2248,6 +3000,1041 @@
             <param name="f"></param>
             <returns></returns>
         </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.SByte)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Byte)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Int16)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.UInt16)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Int32)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.UInt32)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.Int64)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Implicit(System.UInt64)~Oc6.Library.Maths.Fraction">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.SByte)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToFraction(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Equality(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Inequality(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_LessThan(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_LessThanOrEqual(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_GreaterThan(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_GreaterThanOrEqual(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_UnaryNegation(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Negate(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Increment(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Increment(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Decrement(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Decrement(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_UnaryPlus(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Plus(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Addition(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Add(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Subtraction(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Subtract(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Multiply(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Multiply(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.op_Division(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Divide(Oc6.Library.Maths.Fraction,Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.IsSimplified(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="fraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Simplify(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="fraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Normalize(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="fraction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@,System.Globalization.NumberStyles)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.TryParse(System.String,Oc6.Library.Maths.Fraction@,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="frac"></param>
+            <param name="style"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String,System.Globalization.NumberStyles)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="style"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="style"></param>
+            <param name="provider"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString(System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Fraction.Equals(Oc6.Library.Maths.Fraction)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Oc6.Library.Maths.IntegerMath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Numerics.BigInteger[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int32[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int64[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.GreatestCommonDivisor(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int64,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Numerics.BigInteger,System.Numerics.BigInteger)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int32[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Int64[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.LeastCommonMultiple(System.Numerics.BigInteger[])">
+            <summary>
+            
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.SByte)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.Sqrt(System.Numerics.BigInteger)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.SByte)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.IsPowerOfTwo(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.IntegerMath.SignedSqrtInternal(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Oc6.Library.Maths.IterationsExceededException`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Oc6.Library.Maths.IterationsExceededException`1.LastValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.IterationsExceededException`1.#ctor(`0)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:Oc6.Library.Maths.LoanFunctions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Rate(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Rate(System.Int32,System.Decimal,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Periods(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="presentValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.Periods(System.Decimal,System.Decimal,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="presentValue"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.MonthlyPayment(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.MonthlyPayment(System.Decimal,System.Int32,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.PresentValue(System.Double,System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="elapsedPeriods"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.PresentValue(System.Decimal,System.Int32,System.Int32,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="rate"></param>
+            <param name="periods"></param>
+            <param name="elapsedPeriods"></param>
+            <param name="monthlyPayment"></param>
+            <param name="futureValue"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.FutureValue(System.Double,System.Double,System.Double,System.Double,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="rate"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.LoanFunctions.FutureValue(System.Int32,System.Decimal,System.Decimal,System.Decimal,Oc6.Library.Maths.PaymentType)">
+            <summary>
+            
+            </summary>
+            <param name="periods"></param>
+            <param name="presentValue"></param>
+            <param name="rate"></param>
+            <param name="monthlyPayment"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Oc6.Library.Maths.NewtonRaphson">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.NewtonRaphson.DefaultIterations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.NewtonRaphson.DefaultGuess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.NewtonRaphson.DefaultRounding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Numerics.Complex,System.Numerics.Complex},System.Func{System.Numerics.Complex,System.Numerics.Complex},System.Nullable{System.Numerics.Complex},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Decimal,System.Decimal},System.Func{System.Decimal,System.Decimal},System.Decimal,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Double,System.Double},System.Func{System.Double,System.Double},System.Double,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Numerics.BigInteger,System.Numerics.BigInteger},System.Func{System.Numerics.BigInteger,System.Numerics.BigInteger},System.Nullable{System.Numerics.BigInteger},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Single,System.Single},System.Func{System.Single,System.Single},System.Single,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <param name="rounding"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Int32,System.Int32},System.Func{System.Int32,System.Int32},System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="M:Oc6.Library.Maths.NewtonRaphson.Iterate(System.Func{System.Int64,System.Int64},System.Func{System.Int64,System.Int64},System.Int64,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="fx"></param>
+            <param name="dydx"></param>
+            <param name="guess"></param>
+            <param name="iterations"></param>
+            <returns></returns>
+            <exception cref="T:Oc6.Library.Maths.IterationsExceededException`1"></exception>
+        </member>
+        <member name="T:Oc6.Library.Maths.ParseException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.ParseException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Oc6.Library.Maths.Parser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Maths.Parser.State">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.#ctor(System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="cultureInfo"></param>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.Evaluate(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Maths.Parser.Parse(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Oc6.Library.Maths.PaymentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.PaymentType.EndOfPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Oc6.Library.Maths.PaymentType.BeginningOfPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Oc6.Library.Maths.State">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Maths.State.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Maths.State.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="variable"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Oc6.Library.Maths.State.Variables">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Oc6.Library.Net.IpRange">
+            <summary>
+            Packs an IP range for easy overlap matching
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Net.IpRange.Address">
+            <summary>
+            The address bytes as found in <see cref="T:System.Net.IPAddress"/>
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Net.IpRange.Mask">
+            <summary>
+            The subnet mask
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Net.IpRange.Family">
+            <summary>
+            The <see cref="T:System.Net.Sockets.AddressFamily"/> as defined in <see cref="T:System.Net.IPAddress"/>.
+            </summary>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.#ctor(System.Byte[],System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Oc6.Library.Net.IpRange"/> with the given <paramref name="addressBytes"/> and <paramref name="mask"/>.
+            </summary>
+            <param name="addressBytes">The address of the IP</param>
+            <param name="mask">The subnet mask</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when address is null</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when address or mask is invalid</exception>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.#ctor(System.Byte[])">
+            <summary>
+            <para>Creates a new <see cref="T:Oc6.Library.Net.IpRange"/>with the given <paramref name="addressBytes"/> and maximum mask.</para>
+            <para>Equivalent to new IpRange(addressBytes, addressBytes.Length * 8)</para>
+            </summary>
+            <param name="addressBytes">The address of the IP</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when address is invalid</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when address is null</exception>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.TryParseCidr(System.String,Oc6.Library.Net.IpRange@)">
+            <summary>
+            Parses a string in CIDR notation or just a flat IP
+            </summary>
+            <param name="value">The string to parse</param>
+            <param name="ipCidr">The value of the IpCidr if parse succeseeded</param>
+            <returns>true if successfull</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when value is null</exception>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.Overlap(Oc6.Library.Net.IpRange)">
+            <summary>
+            <para>Tests if two ip ranges overlap</para>
+            <para>Can be used to test if an IP is within a range too</para>
+            </summary>
+            <param name="other">The other IpRange to match for overlap</param>
+            <returns>true if this overlaps with other</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when address is invalid</exception>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.ToString">
+            <summary>
+            Returns a string representation of this IpRange in CIDR notation
+            </summary>
+            <returns>CIDR notation</returns>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.Equals(Oc6.Library.Net.IpRange)">
+            <summary>
+            Compares true if the two ranges define the same exact range
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.Equals(System.Object)">
+            <summary>
+            Compares an object to this IpRange
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Oc6.Library.Net.IpRange.GetHashCode">
+            <summary>
+            Returns a hash based on the range this contains
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Oc6.Library.Resources.ErrorMessages">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -2267,6 +4054,21 @@
         <member name="P:Oc6.Library.Resources.ErrorMessages.CryptoRandomNumberGenerator_MustBeOrdered">
             <summary>
               Looks up a localized string similar to [{0}] must be smaller than [{1}].
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.InvalidAddressSize">
+            <summary>
+              Looks up a localized string similar to Invalid address size.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.InvalidMask">
+            <summary>
+              Looks up a localized string similar to Invalid mask.
+            </summary>
+        </member>
+        <member name="P:Oc6.Library.Resources.ErrorMessages.InvalidState">
+            <summary>
+              Looks up a localized string similar to Invalid state.
             </summary>
         </member>
         <member name="P:Oc6.Library.Resources.ErrorMessages.MustBePositive">

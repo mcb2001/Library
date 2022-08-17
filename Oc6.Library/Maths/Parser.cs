@@ -11,20 +11,35 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Maths
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed class Parser
     {
         private readonly CultureInfo cultureInfo;
         private readonly Tokenizer tokenizer;
-        private static readonly MethodInfo PowMethod = typeof(DecimalMath).GetMethod(nameof(DecimalMath.Pow));
+        private static readonly MethodInfo PowMethod =
+            typeof(DecimalMath).GetMethod(nameof(DecimalMath.Pow))
+            ?? throw new NullReferenceException(ErrorMessages.InvalidState);
 
+        /// <summary>
+        /// 
+        /// </summary>
         public State State { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Parser()
             : this(CultureInfo.InvariantCulture)
         {
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cultureInfo"></param>
         public Parser(CultureInfo cultureInfo)
         {
             this.cultureInfo = cultureInfo;
@@ -32,6 +47,11 @@ namespace Oc6.Library.Maths
             State = new State();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public decimal Evaluate(string input)
         {
             var parsed = Parse(input);
@@ -39,6 +59,12 @@ namespace Oc6.Library.Maths
             return compiled();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public Expression<Func<decimal>> Parse(string input)
         {
             if (input == null)
@@ -62,9 +88,9 @@ namespace Oc6.Library.Maths
 
         private Expression Parse(Span<Token> tokens)
         {
-            Stack<Expression> operandStack = new Stack<Expression>();
+            Stack<Expression> operandStack = new();
 
-            Stack<TokenType> operatorStack = new Stack<TokenType>();
+            Stack<TokenType> operatorStack = new();
             operatorStack.Push(TokenType.Nop);
 
             for (int i = 0; i < tokens.Length; ++i)
@@ -211,7 +237,7 @@ namespace Oc6.Library.Maths
             }
             else
             {
-                string str = new string(span);
+                string str = new(span);
 
                 string message = string.Format(CultureInfo.InvariantCulture, ErrorMessages.Parser_InvalidNumber, str);
 
@@ -222,7 +248,7 @@ namespace Oc6.Library.Maths
         private Expression ParseWord(Token token)
         {
             var span = token.ToSpan();
-            string str = new string(span);
+            string str = new(span);
 
             return Expression.Constant(State[str], typeof(decimal));
         }

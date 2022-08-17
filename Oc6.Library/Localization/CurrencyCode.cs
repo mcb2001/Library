@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Localization
 {
+    /// <summary>
+    /// ISO currencies
+    /// </summary>
     public enum CurrencyCode
     {
         /// <summary>
