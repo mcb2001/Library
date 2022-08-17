@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Localization
 {
+    /// <summary>
+    /// Country code as defined by ISO
+    /// </summary>
     public enum CountryCode
     {
         /// <summary>

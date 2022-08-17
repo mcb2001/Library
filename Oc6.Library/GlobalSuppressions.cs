@@ -8,6 +8,20 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage(
     "Design",
     "CA1032:Implement standard exception constructors",
-    Justification = "<Pending>",
+    Justification = "By design",
     Scope = "namespaceanddescendants",
-    Target = "Oc6.Library")]
+    Target = "~N:Oc6.Library")]
+
+[assembly: SuppressMessage(
+    "Performance",
+    "CA1819:Properties should not return arrays",
+    Justification = "By design",
+    Scope = "namespaceanddescendants",
+    Target = "~N:Oc6.Library")]
+
+[assembly: SuppressMessage(
+    "Naming",
+    "CA1707:Identifiers should not contain underscores",
+    Justification = "By definition",
+    Scope = "type",
+    Target = "~T:Oc6.Library.Localization.CultureCode")]
