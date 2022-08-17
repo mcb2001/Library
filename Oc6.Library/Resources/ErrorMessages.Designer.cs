@@ -19,7 +19,7 @@ namespace Oc6.Library.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ErrorMessages {
@@ -66,6 +66,24 @@ namespace Oc6.Library.Resources {
         internal static string CryptoRandomNumberGenerator_MustBeOrdered {
             get {
                 return ResourceManager.GetString("CryptoRandomNumberGenerator_MustBeOrdered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid address size.
+        /// </summary>
+        internal static string InvalidAddressSize {
+            get {
+                return ResourceManager.GetString("InvalidAddressSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid mask.
+        /// </summary>
+        internal static string InvalidMask {
+            get {
+                return ResourceManager.GetString("InvalidMask", resourceCulture);
             }
         }
         
