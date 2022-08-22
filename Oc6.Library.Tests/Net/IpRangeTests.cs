@@ -43,6 +43,12 @@ namespace Oc6.Library.Tests.Net
         }
 
         [TestMethod]
+        public void TryParseCidr_IPv6_Trailing_Success()
+        {
+            Assert.IsTrue(IpRange.TryParseCidr("2a01:111:f400::/48", out IpRange _));
+        }
+
+        [TestMethod]
         public void TryParseCidr_IPv6CIDR_Medium_Success()
         {
             Assert.IsTrue(IpRange.TryParseCidr("2001::1/32", out IpRange _));
