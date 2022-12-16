@@ -11,44 +11,30 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Crypto
 {
-    /// <summary>
-    /// Uses a <see cref="RandomNumberGenerator"/> to generate Int32 values
-    /// </summary>
     public sealed class CryptoRandomNumberGenerator : IDisposable, ICryptoRandomNumberGenerator
     {
         private readonly object syncRoot = new();
         private readonly RandomNumberGenerator randomNumberGenerator;
         private readonly bool shouldDispose;
+        private bool isDisposed = false;
 
-        /// <summary>
-        /// Creates a new default and shouldDispose = true
-        /// </summary>
         public CryptoRandomNumberGenerator()
             : this(RandomNumberGenerator.Create())
         {
 
         }
 
-        /// <summary>
-        /// Uses supplied numbergenerator and shouldDispose = true
-        /// </summary>
         public CryptoRandomNumberGenerator(RandomNumberGenerator randomNumberGenerator)
             : this(randomNumberGenerator, true)
         {
         }
 
-        /// <summary>
-        /// Uses supplied parameters
-        /// </summary>
         public CryptoRandomNumberGenerator(RandomNumberGenerator randomNumberGenerator, bool shouldDispose)
         {
             this.randomNumberGenerator = randomNumberGenerator ?? throw new ArgumentNullException(nameof(randomNumberGenerator));
             this.shouldDispose = shouldDispose;
         }
 
-        /// <summary>
-        /// Fisher-Yates shuffles any <see cref="IList{T}"/> (includes <see cref="List{T}"/> and T[]
-        /// </summary>
         public void Shuffle<T>(IList<T> list)
         {
             if (list == null)
@@ -59,37 +45,24 @@ namespace Oc6.Library.Crypto
             for (int i = list.Count - 1; i > 0; --i)
             {
                 int j = this.NextInt(0, i + 1);
-                T a = list[i];
-                list[i] = list[j];
-                list[j] = a;
+                (list[j], list[i]) = (list[i], list[j]);
             }
         }
 
-        /// <summary>
-        /// Fisher-Yates shuffles any <see cref="Span{T}"/>
-        /// </summary>
         public void Shuffle<T>(Span<T> span)
         {
             for (int i = span.Length - 1; i > 0; --i)
             {
                 int j = this.NextInt(0, i + 1);
-                T a = span[i];
-                span[i] = span[j];
-                span[j] = a;
+                (span[j], span[i]) = (span[i], span[j]);
             }
         }
 
-        /// <summary>
-        /// Fisher-Yates shuffles any <see cref="Memory{T}"/>
-        /// </summary>
         public void Shuffle<T>(Memory<T> memory)
         {
             Shuffle(memory.Span);
         }
 
-        /// <summary>
-        /// Get non-negative int
-        /// </summary>
         public int NextInt()
         {
             var i = NextUnBounded();
@@ -108,14 +81,11 @@ namespace Oc6.Library.Crypto
             return i;
         }
 
-        /// <summary>
-        /// Get bounded int
-        /// </summary>
         public int NextInt(int from, int upTo)
         {
             if (upTo <= from)
             {
-                var message = string.Format(CultureInfo.InvariantCulture, ErrorMessages.CryptoRandomNumberGenerator_MustBeOrdered, nameof(from), nameof(upTo));
+                var message = string.Format(CultureInfo.CurrentCulture, ErrorMessages.CryptoRandomNumberGenerator_MustBeOrdered, nameof(from), nameof(upTo));
 
                 throw new ArgumentException(message);
             }
@@ -123,9 +93,6 @@ namespace Oc6.Library.Crypto
             return (NextInt() / (int.MaxValue / (upTo - from))) + from;
         }
 
-        /// <summary>
-        /// Get a random <see cref="Int32"/>
-        /// </summary>
         public int NextUnBounded()
         {
             lock (syncRoot)
@@ -138,15 +105,19 @@ namespace Oc6.Library.Crypto
             }
         }
 
-        /// <summary>
-        /// Disposes the internal numbergenerator if shouldDispose is true
-        /// </summary>
         public void Dispose()
         {
+            if (isDisposed)
+            {
+                return;
+            }
+
             if (shouldDispose)
             {
                 randomNumberGenerator.Dispose();
             }
+
+            isDisposed = true;
         }
     }
 }

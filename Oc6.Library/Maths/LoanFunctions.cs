@@ -6,20 +6,8 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Maths
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public static class LoanFunctions
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="periods"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static double Rate(double periods, double presentValue, double futureValue, double monthlyPayment, PaymentType type)
         {
             double t = (int)type;
@@ -38,15 +26,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="periods"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static decimal Rate(int periods, decimal presentValue, decimal futureValue, decimal monthlyPayment, PaymentType type)
         {
             decimal t = (int)type;
@@ -66,15 +45,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rate"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static double Periods(double rate, double presentValue, double monthlyPayment, double futureValue, PaymentType type)
         {
             int N = 0;
@@ -91,15 +61,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rate"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static decimal Periods(decimal rate, decimal presentValue, decimal monthlyPayment, decimal futureValue, PaymentType type)
         {
             int N = 0;
@@ -116,15 +77,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rate"></param>
-        /// <param name="periods"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static double MonthlyPayment(double rate, double periods, double presentValue, double futureValue, PaymentType type)
         {
             if (rate == 0)
@@ -137,15 +89,6 @@ namespace Oc6.Library.Maths
             return ((presentValue * Math.Pow(1 + rate, periods)) - futureValue) / ((1 + (rate * t)) * ((Math.Pow(1 + rate, periods) - 1) / rate));
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rate"></param>
-        /// <param name="periods"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static decimal MonthlyPayment(decimal rate, int periods, decimal presentValue, decimal futureValue, PaymentType type)
         {
             if (rate == 0)
@@ -158,16 +101,6 @@ namespace Oc6.Library.Maths
             return ((presentValue * DecimalMath.Pow(1 + rate, periods)) - futureValue) / ((1 + (rate * t)) * ((DecimalMath.Pow(1 + rate, periods) - 1) / rate));
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rate"></param>
-        /// <param name="periods"></param>
-        /// <param name="elapsedPeriods"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static double PresentValue(double rate, double periods, double elapsedPeriods, double monthlyPayment, double futureValue, PaymentType type)
         {
             if (rate == 0)
@@ -185,16 +118,6 @@ namespace Oc6.Library.Maths
             return ((monthlyPayment * (1 + (rate * t)) * ((Math.Pow(1 + rate, periods - elapsedPeriods) - 1) / rate)) + futureValue) / Math.Pow(1 + rate, periods - elapsedPeriods);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rate"></param>
-        /// <param name="periods"></param>
-        /// <param name="elapsedPeriods"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="futureValue"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static decimal PresentValue(decimal rate, int periods, int elapsedPeriods, decimal monthlyPayment, decimal futureValue, PaymentType type)
         {
             if (rate == 0)
@@ -212,30 +135,12 @@ namespace Oc6.Library.Maths
             return ((monthlyPayment * (1 + (rate * t)) * ((DecimalMath.Pow(1 + rate, periods - elapsedPeriods) - 1) / rate)) + futureValue) / DecimalMath.Pow(1 + rate, periods - elapsedPeriods);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="periods"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="rate"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static double FutureValue(double periods, double presentValue, double rate, double monthlyPayment, PaymentType type)
         {
             double t = (int)type;
             return Math.Round(-1 * (((1 + (rate * t)) * ((Math.Pow(1 + rate, periods) - 1) / rate) * monthlyPayment) - (presentValue * Math.Pow(1 + rate, periods))), 8);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="periods"></param>
-        /// <param name="presentValue"></param>
-        /// <param name="rate"></param>
-        /// <param name="monthlyPayment"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
         public static decimal FutureValue(int periods, decimal presentValue, decimal rate, decimal monthlyPayment, PaymentType type)
         {
             decimal t = (int)type;

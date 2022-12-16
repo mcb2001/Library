@@ -10,24 +10,12 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Net
 {
-    /// <summary>
-    /// Packs an IP range for easy overlap matching
-    /// </summary>
     public class IpRange : IEquatable<IpRange>
     {
-        /// <summary>
-        /// The address bytes as found in <see cref="System.Net.IPAddress"/>
-        /// </summary>
         public byte[] Address { get; }
 
-        /// <summary>
-        /// The subnet mask
-        /// </summary>
         public int Mask { get; }
 
-        /// <summary>
-        /// The <see cref="System.Net.Sockets.AddressFamily"/> as defined in <see cref="System.Net.IPAddress"/>.
-        /// </summary>
         public AddressFamily Family => Address.Length == 4 ? AddressFamily.InterNetwork : AddressFamily.InterNetworkV6;
 
         private static readonly char[] ValidChars = new[] {
@@ -37,13 +25,6 @@ namespace Oc6.Library.Net
         private string Comparable { get; }
         private Regex Comparer { get; }
 
-        /// <summary>
-        /// Creates a new <see cref="IpRange"/> with the given <paramref name="addressBytes"/> and <paramref name="mask"/>.
-        /// </summary>
-        /// <param name="addressBytes">The address of the IP</param>
-        /// <param name="mask">The subnet mask</param>
-        /// <exception cref="ArgumentNullException">Thrown when address is null</exception>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when address or mask is invalid</exception>
         public IpRange(byte[] addressBytes, int mask)
         {
             if (addressBytes == null)
@@ -81,13 +62,6 @@ namespace Oc6.Library.Net
             Comparer = new Regex('^' + Comparable + '$');
         }
 
-        /// <summary>
-        /// <para>Creates a new <see cref="IpRange"/>with the given <paramref name="addressBytes"/> and maximum mask.</para>
-        /// <para>Equivalent to new IpRange(addressBytes, addressBytes.Length * 8)</para>
-        /// </summary>
-        /// <param name="addressBytes">The address of the IP</param>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when address is invalid</exception>
-        /// <exception cref="ArgumentNullException">Thrown when address is null</exception>
         public IpRange(byte[] addressBytes)
             : this(addressBytes ?? throw new ArgumentNullException(nameof(addressBytes)),
                   addressBytes.Length * 8)
@@ -95,13 +69,6 @@ namespace Oc6.Library.Net
 
         }
 
-        /// <summary>
-        /// Parses a string in CIDR notation or just a flat IP
-        /// </summary>
-        /// <param name="value">The string to parse</param>
-        /// <param name="ipCidr">The value of the IpCidr if parse succeseeded</param>
-        /// <returns>true if successfull</returns>
-        /// <exception cref="ArgumentNullException">Thrown when value is null</exception>
         public static bool TryParseCidr(string value, out IpRange? ipCidr)
         {
             if (value == null)
@@ -184,13 +151,6 @@ namespace Oc6.Library.Net
             }
         }
 
-        /// <summary>
-        /// <para>Tests if two ip ranges overlap</para>
-        /// <para>Can be used to test if an IP is within a range too</para>
-        /// </summary>
-        /// <param name="other">The other IpRange to match for overlap</param>
-        /// <returns>true if this overlaps with other</returns>
-        /// <exception cref="ArgumentNullException">Thrown when address is invalid</exception>
         public bool Overlap(IpRange other)
             => other == null ? throw new ArgumentNullException(nameof(other))
             : this.Comparer.Match(other.Comparable).Success
@@ -202,18 +162,9 @@ namespace Oc6.Library.Net
             return count == 4;
         }
 
-        /// <summary>
-        /// Returns a string representation of this IpRange in CIDR notation
-        /// </summary>
-        /// <returns>CIDR notation</returns>
         public override string ToString()
             => $"{new IPAddress(Address)}/{Mask}";
 
-        /// <summary>
-        /// Compares true if the two ranges define the same exact range
-        /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
         public bool Equals(IpRange? other)
         {
             if (other == null)
@@ -224,11 +175,6 @@ namespace Oc6.Library.Net
             return this.Comparable.Equals(other.Comparable, StringComparison.Ordinal);
         }
 
-        /// <summary>
-        /// Compares an object to this IpRange
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
         public override bool Equals(object? obj)
         {
             if (obj is IpRange other)
@@ -239,10 +185,6 @@ namespace Oc6.Library.Net
             return false;
         }
 
-        /// <summary>
-        /// Returns a hash based on the range this contains
-        /// </summary>
-        /// <returns></returns>
         public override int GetHashCode()
             => string.GetHashCode(this.Comparable, StringComparison.Ordinal);
     }
