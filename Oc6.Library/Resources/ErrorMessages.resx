@@ -159,4 +159,7 @@
   <data name="TokenType_InvalidType" xml:space="preserve">
     <value>Invalid type</value>
   </data>
+  <data name="TsidMustBePositive" xml:space="preserve">
+    <value>Tsid must be positive</value>
+  </data>
 </root>

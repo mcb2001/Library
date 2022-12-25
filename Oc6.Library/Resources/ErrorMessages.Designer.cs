@@ -185,5 +185,14 @@ namespace Oc6.Library.Resources {
                 return ResourceManager.GetString("TokenType_InvalidType", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tsid must be positive.
+        /// </summary>
+        internal static string TsidMustBePositive {
+            get {
+                return ResourceManager.GetString("TsidMustBePositive", resourceCulture);
+            }
+        }
     }
 }
