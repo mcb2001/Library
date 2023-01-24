@@ -17,13 +17,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Powershell script
-      uses: Amadevus/pwsh-script@v2
-      id: update-version
-      with:
-        script: '$csprojfilename = Get-ChildItem -Recurse Oc6.Library.csproj | Select-Object -ExpandProperty FullName;$xml = New-Object XML;$xml.Load($csprojfilename);#[xml]$csprojcontents = Get-Content -Path $csprojfilename;$node = $xml.SelectSingleNode("//Version");$node.InnerText = "1.${{ github.run_number }}.0.0";$xml.Save($csprojfilename);'
-
-
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -31,6 +24,11 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
+
+    - name: Powershell script
+      uses: Amadevus/pwsh-script@v2
+      with:
+        script: '$csprojfilename = Get-ChildItem -Recurse Oc6.Library.csproj | Select-Object -ExpandProperty FullName;$xml = New-Object XML;$xml.Load($csprojfilename);$node = $xml.SelectSingleNode("//Version");$node.InnerText = "1.${{ github.run_number }}.0.0";$xml.Save($csprojfilename);'
 
     - name: Build
       run: dotnet build --no-restore --configuration Release
