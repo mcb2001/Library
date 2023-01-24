@@ -29,5 +29,5 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release
     - name: Publish
-      run: dotnet nuget push "Oc6.Library/bin/Release/**" --source "github" --api-key YOUR_GITHUB_PAT ${{ secrets.PAT }}
+      run: dotnet nuget push "Oc6.Library/bin/Release/**" --source "github" --api-key ${{ secrets.PAT }}
 
