@@ -13,6 +13,7 @@
 		<RepositoryType>GIT</RepositoryType>
 		<NeutralLanguage>en</NeutralLanguage>
 		<Nullable>enable</Nullable>
+		<Version>1.0.0.0</Version>
 		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 	</PropertyGroup>
 
