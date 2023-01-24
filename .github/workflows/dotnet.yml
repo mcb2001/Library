@@ -13,19 +13,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Powershell script
+      uses: Amadevus/pwsh-script@v2
+      id: update-version
+      with:
+        script: '$csprojfilename = .\Oc6.Library\Oc6.Library.csproj;[xml]$csprojcontents = Get-Content -Path $csprojfilename;"Current version number is" + $csprojcontents.Project.PropertyGroup.Version;$oldversionNumber = $csprojcontents.Project.PropertyGroup.Version;$csprojcontents.Project.PropertyGroup.Version = ${{ github.run_number }};$csprojcontents.Save($csprojfilename)'
+
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --no-restore --configuration Release
+
     - name: Test
-      run: dotnet test --no-build --verbosity normal --configuration Release --version-suffix "_${{ github.run_number }}"
+      run: dotnet test --no-build --verbosity normal --configuration Release
+
     - name: Login
       run: dotnet nuget add source --username mcb2001 --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/mcb2001/index.json"
+
     - name: Publish
       run: dotnet nuget push "Oc6.Library/bin/Release/**" --source "github" --api-key ${{ secrets.PAT }}
-
