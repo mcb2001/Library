@@ -8,18 +8,8 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Maths
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public static class IntegerMath
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public static BigInteger GreatestCommonDivisor(params BigInteger[] values)
         {
             if (values == null)
@@ -58,13 +48,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public static int GreatestCommonDivisor(params int[] values)
         {
             if (values == null)
@@ -103,13 +86,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
         public static int GreatestCommonDivisor(int a, int b)
         {
             if (a < 0)
@@ -140,13 +116,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public static long GreatestCommonDivisor(params long[] values)
         {
             if (values == null)
@@ -185,13 +154,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
         public static long GreatestCommonDivisor(long a, long b)
         {
             if (a < 0)
@@ -222,46 +184,21 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
         public static int LeastCommonMultiple(int a, int b)
         {
             return a * b / GreatestCommonDivisor(a, b);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
         public static long LeastCommonMultiple(long a, long b)
         {
             return a * b / GreatestCommonDivisor(a, b);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <returns></returns>
         public static BigInteger LeastCommonMultiple(BigInteger a, BigInteger b)
         {
             return a * b / GreatestCommonDivisor(a, b);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public static int LeastCommonMultiple(params int[] values)
         {
             if (values == null)
@@ -293,13 +230,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public static long LeastCommonMultiple(params long[] values)
         {
             if (values == null)
@@ -331,13 +261,6 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="values"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public static BigInteger LeastCommonMultiple(params BigInteger[] values)
         {
             if (values == null)
@@ -369,22 +292,11 @@ namespace Oc6.Library.Maths
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static sbyte Sqrt(sbyte input)
         {
             return (sbyte)SignedSqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static byte Sqrt(byte input)
         {
             if (input < 0)
@@ -395,21 +307,11 @@ namespace Oc6.Library.Maths
             return (byte)SqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static short Sqrt(short input)
         {
             return (short)SignedSqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static ushort Sqrt(ushort input)
         {
             return (ushort)SqrtInternal(input);
@@ -425,42 +327,21 @@ namespace Oc6.Library.Maths
             return (int)SignedSqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static uint Sqrt(uint input)
         {
             return (uint)SqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static long Sqrt(long input)
         {
             return (long)SignedSqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static ulong Sqrt(ulong input)
         {
             return SqrtInternal(input);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static BigInteger Sqrt(BigInteger input)
         {
             if (input < 0)
@@ -475,14 +356,7 @@ namespace Oc6.Library.Maths
 
             BigInteger t;
 
-            try
-            {
-                t = NewtonRaphson.Iterate(x => (x * x) - input, x => 2 * x, 2147483648);
-            }
-            catch (IterationsExceededException<BigInteger> exc)
-            {
-                t = exc.LastValue;
-            }
+            t = NewtonRaphson.Iterate(x => (x * x) - input, x => 2 * x, 2147483648).LastValue;
 
             if (t * t == input)
             {
@@ -508,92 +382,46 @@ namespace Oc6.Library.Maths
             return t - 1;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(sbyte x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(byte x)
         {
             return x > 0 && IsPowerOfTwoInternal(x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(short x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(ushort x)
         {
             return IsPowerOfTwoInternal(x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(int x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(uint x)
         {
             return IsPowerOfTwoInternal(x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(long x)
         {
             return x > 0 && IsPowerOfTwoInternal((ulong)x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
         public static bool IsPowerOfTwo(ulong x)
         {
             return IsPowerOfTwoInternal(x);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
         private static ulong SignedSqrtInternal(long input)
         {
             if (input < 0)
@@ -614,14 +442,7 @@ namespace Oc6.Library.Maths
             double i = input;
             double value;
 
-            try
-            {
-                value = NewtonRaphson.Iterate(x => (x * x) - i, x => 2.0 * x, 2147483648);
-            }
-            catch (IterationsExceededException<double> exc)
-            {
-                value = exc.LastValue;
-            }
+            value = NewtonRaphson.Iterate(x => (x * x) - i, x => 2.0 * x, 2147483648).LastValue;
 
             ulong t = (ulong)value;
 
@@ -648,77 +469,74 @@ namespace Oc6.Library.Maths
         }
 
         private static bool IsPowerOfTwoInternal(ulong x)
-        {
-            switch (x)
+            => x switch
             {
-                case 0b0000000000000000000000000000000000000000000000000000000000000001:
-                case 0b0000000000000000000000000000000000000000000000000000000000000010:
-                case 0b0000000000000000000000000000000000000000000000000000000000000100:
-                case 0b0000000000000000000000000000000000000000000000000000000000001000:
-                case 0b0000000000000000000000000000000000000000000000000000000000010000:
-                case 0b0000000000000000000000000000000000000000000000000000000000100000:
-                case 0b0000000000000000000000000000000000000000000000000000000001000000:
-                case 0b0000000000000000000000000000000000000000000000000000000010000000:
-                case 0b0000000000000000000000000000000000000000000000000000000100000000:
-                case 0b0000000000000000000000000000000000000000000000000000001000000000:
-                case 0b0000000000000000000000000000000000000000000000000000010000000000:
-                case 0b0000000000000000000000000000000000000000000000000000100000000000:
-                case 0b0000000000000000000000000000000000000000000000000001000000000000:
-                case 0b0000000000000000000000000000000000000000000000000010000000000000:
-                case 0b0000000000000000000000000000000000000000000000000100000000000000:
-                case 0b0000000000000000000000000000000000000000000000001000000000000000:
-                case 0b0000000000000000000000000000000000000000000000010000000000000000:
-                case 0b0000000000000000000000000000000000000000000000100000000000000000:
-                case 0b0000000000000000000000000000000000000000000001000000000000000000:
-                case 0b0000000000000000000000000000000000000000000010000000000000000000:
-                case 0b0000000000000000000000000000000000000000000100000000000000000000:
-                case 0b0000000000000000000000000000000000000000001000000000000000000000:
-                case 0b0000000000000000000000000000000000000000010000000000000000000000:
-                case 0b0000000000000000000000000000000000000000100000000000000000000000:
-                case 0b0000000000000000000000000000000000000001000000000000000000000000:
-                case 0b0000000000000000000000000000000000000010000000000000000000000000:
-                case 0b0000000000000000000000000000000000000100000000000000000000000000:
-                case 0b0000000000000000000000000000000000001000000000000000000000000000:
-                case 0b0000000000000000000000000000000000010000000000000000000000000000:
-                case 0b0000000000000000000000000000000000100000000000000000000000000000:
-                case 0b0000000000000000000000000000000001000000000000000000000000000000:
-                case 0b0000000000000000000000000000000010000000000000000000000000000000:
-                case 0b0000000000000000000000000000000100000000000000000000000000000000:
-                case 0b0000000000000000000000000000001000000000000000000000000000000000:
-                case 0b0000000000000000000000000000010000000000000000000000000000000000:
-                case 0b0000000000000000000000000000100000000000000000000000000000000000:
-                case 0b0000000000000000000000000001000000000000000000000000000000000000:
-                case 0b0000000000000000000000000010000000000000000000000000000000000000:
-                case 0b0000000000000000000000000100000000000000000000000000000000000000:
-                case 0b0000000000000000000000001000000000000000000000000000000000000000:
-                case 0b0000000000000000000000010000000000000000000000000000000000000000:
-                case 0b0000000000000000000000100000000000000000000000000000000000000000:
-                case 0b0000000000000000000001000000000000000000000000000000000000000000:
-                case 0b0000000000000000000010000000000000000000000000000000000000000000:
-                case 0b0000000000000000000100000000000000000000000000000000000000000000:
-                case 0b0000000000000000001000000000000000000000000000000000000000000000:
-                case 0b0000000000000000010000000000000000000000000000000000000000000000:
-                case 0b0000000000000000100000000000000000000000000000000000000000000000:
-                case 0b0000000000000001000000000000000000000000000000000000000000000000:
-                case 0b0000000000000010000000000000000000000000000000000000000000000000:
-                case 0b0000000000000100000000000000000000000000000000000000000000000000:
-                case 0b0000000000001000000000000000000000000000000000000000000000000000:
-                case 0b0000000000010000000000000000000000000000000000000000000000000000:
-                case 0b0000000000100000000000000000000000000000000000000000000000000000:
-                case 0b0000000001000000000000000000000000000000000000000000000000000000:
-                case 0b0000000010000000000000000000000000000000000000000000000000000000:
-                case 0b0000000100000000000000000000000000000000000000000000000000000000:
-                case 0b0000001000000000000000000000000000000000000000000000000000000000:
-                case 0b0000010000000000000000000000000000000000000000000000000000000000:
-                case 0b0000100000000000000000000000000000000000000000000000000000000000:
-                case 0b0001000000000000000000000000000000000000000000000000000000000000:
-                case 0b0010000000000000000000000000000000000000000000000000000000000000:
-                case 0b0100000000000000000000000000000000000000000000000000000000000000:
-                case 0b1000000000000000000000000000000000000000000000000000000000000000:
-                    return true;
-                default:
-                    return false;
-            }
-        }
+                0b0000000000000000000000000000000000000000000000000000000000000001
+             or 0b0000000000000000000000000000000000000000000000000000000000000010
+             or 0b0000000000000000000000000000000000000000000000000000000000000100
+             or 0b0000000000000000000000000000000000000000000000000000000000001000
+             or 0b0000000000000000000000000000000000000000000000000000000000010000
+             or 0b0000000000000000000000000000000000000000000000000000000000100000
+             or 0b0000000000000000000000000000000000000000000000000000000001000000
+             or 0b0000000000000000000000000000000000000000000000000000000010000000
+             or 0b0000000000000000000000000000000000000000000000000000000100000000
+             or 0b0000000000000000000000000000000000000000000000000000001000000000
+             or 0b0000000000000000000000000000000000000000000000000000010000000000
+             or 0b0000000000000000000000000000000000000000000000000000100000000000
+             or 0b0000000000000000000000000000000000000000000000000001000000000000
+             or 0b0000000000000000000000000000000000000000000000000010000000000000
+             or 0b0000000000000000000000000000000000000000000000000100000000000000
+             or 0b0000000000000000000000000000000000000000000000001000000000000000
+             or 0b0000000000000000000000000000000000000000000000010000000000000000
+             or 0b0000000000000000000000000000000000000000000000100000000000000000
+             or 0b0000000000000000000000000000000000000000000001000000000000000000
+             or 0b0000000000000000000000000000000000000000000010000000000000000000
+             or 0b0000000000000000000000000000000000000000000100000000000000000000
+             or 0b0000000000000000000000000000000000000000001000000000000000000000
+             or 0b0000000000000000000000000000000000000000010000000000000000000000
+             or 0b0000000000000000000000000000000000000000100000000000000000000000
+             or 0b0000000000000000000000000000000000000001000000000000000000000000
+             or 0b0000000000000000000000000000000000000010000000000000000000000000
+             or 0b0000000000000000000000000000000000000100000000000000000000000000
+             or 0b0000000000000000000000000000000000001000000000000000000000000000
+             or 0b0000000000000000000000000000000000010000000000000000000000000000
+             or 0b0000000000000000000000000000000000100000000000000000000000000000
+             or 0b0000000000000000000000000000000001000000000000000000000000000000
+             or 0b0000000000000000000000000000000010000000000000000000000000000000
+             or 0b0000000000000000000000000000000100000000000000000000000000000000
+             or 0b0000000000000000000000000000001000000000000000000000000000000000
+             or 0b0000000000000000000000000000010000000000000000000000000000000000
+             or 0b0000000000000000000000000000100000000000000000000000000000000000
+             or 0b0000000000000000000000000001000000000000000000000000000000000000
+             or 0b0000000000000000000000000010000000000000000000000000000000000000
+             or 0b0000000000000000000000000100000000000000000000000000000000000000
+             or 0b0000000000000000000000001000000000000000000000000000000000000000
+             or 0b0000000000000000000000010000000000000000000000000000000000000000
+             or 0b0000000000000000000000100000000000000000000000000000000000000000
+             or 0b0000000000000000000001000000000000000000000000000000000000000000
+             or 0b0000000000000000000010000000000000000000000000000000000000000000
+             or 0b0000000000000000000100000000000000000000000000000000000000000000
+             or 0b0000000000000000001000000000000000000000000000000000000000000000
+             or 0b0000000000000000010000000000000000000000000000000000000000000000
+             or 0b0000000000000000100000000000000000000000000000000000000000000000
+             or 0b0000000000000001000000000000000000000000000000000000000000000000
+             or 0b0000000000000010000000000000000000000000000000000000000000000000
+             or 0b0000000000000100000000000000000000000000000000000000000000000000
+             or 0b0000000000001000000000000000000000000000000000000000000000000000
+             or 0b0000000000010000000000000000000000000000000000000000000000000000
+             or 0b0000000000100000000000000000000000000000000000000000000000000000
+             or 0b0000000001000000000000000000000000000000000000000000000000000000
+             or 0b0000000010000000000000000000000000000000000000000000000000000000
+             or 0b0000000100000000000000000000000000000000000000000000000000000000
+             or 0b0000001000000000000000000000000000000000000000000000000000000000
+             or 0b0000010000000000000000000000000000000000000000000000000000000000
+             or 0b0000100000000000000000000000000000000000000000000000000000000000
+             or 0b0001000000000000000000000000000000000000000000000000000000000000
+             or 0b0010000000000000000000000000000000000000000000000000000000000000
+             or 0b0100000000000000000000000000000000000000000000000000000000000000
+             or 0b1000000000000000000000000000000000000000000000000000000000000000
+                 => true,
+                _ => false,
+            };
     }
 }

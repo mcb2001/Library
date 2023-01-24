@@ -97,6 +97,24 @@ namespace Oc6.Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to List cannot be empty.
+        /// </summary>
+        internal static string ListCannotBeEmpty {
+            get {
+                return ResourceManager.GetString("ListCannotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List cannot be null.
+        /// </summary>
+        internal static string ListCannotBeNull {
+            get {
+                return ResourceManager.GetString("ListCannotBeNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Must be positive.
         /// </summary>
         internal static string MustBePositive {
@@ -183,6 +201,15 @@ namespace Oc6.Library.Resources {
         internal static string TokenType_InvalidType {
             get {
                 return ResourceManager.GetString("TokenType_InvalidType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tsid must be positive.
+        /// </summary>
+        internal static string TsidMustBePositive {
+            get {
+                return ResourceManager.GetString("TsidMustBePositive", resourceCulture);
             }
         }
     }
