@@ -1,6 +1,7 @@
 ﻿using Oc6.Library.Maths;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,38 +10,20 @@ namespace Oc6.Library.Tests.Maths
 {
     public  class DecimalMathsTests
     {
-        [Fact]
-        public void PowInt()
+        [Theory]
+        [InlineData("81", "9", "2")]
+        [InlineData("0.012345679012345679012345679", "9", "-2")]
+        [InlineData("1.8587296919794811670420219951", "1.2", "3.4")]
+        [InlineData("0.5380018430410047863745228634", "1.2", "-3.4")]
+        public void Pow(string expectedString, string valueString, string powerString)
         {
-            const decimal expected = 81.0M;
-            decimal actual = 9.0M;
-            actual = DecimalMath.Pow(actual, 2);
-            Assert.Equal<decimal>(expected, actual);
-        }
+            decimal expected = decimal.Parse(expectedString, NumberStyles.Number, CultureInfo.InvariantCulture);
 
-        [Fact]
-        public void PowNegativeInt()
-        {
-            const decimal expected = 0.012345679012345679012345679M;
-            decimal actual = 9.0M;
-            actual = DecimalMath.Pow(actual, -2);
-            Assert.Equal<decimal>(expected, actual);
-        }
+            decimal value = decimal.Parse(valueString, NumberStyles.Number, CultureInfo.InvariantCulture);
+            decimal power = decimal.Parse(powerString, NumberStyles.Number, CultureInfo.InvariantCulture);
+            decimal actual = DecimalMath.Pow(value, power);
 
-        [Fact]
-        public void PowDecimal()
-        {
-            const decimal expected = 1.8587296919794811670420219951M;
-            decimal actual = DecimalMath.Pow(1.2M, 3.4M);
-            Assert.Equal<decimal>(expected, actual);
-        }
-
-        [Fact]
-        public void PowNegativeDecimal()
-        {
-            const decimal expected = 0.5380018430410047863745228634M;
-            decimal actual = DecimalMath.Pow(1.2M, -3.4M);
-            Assert.Equal<decimal>(expected, actual);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]

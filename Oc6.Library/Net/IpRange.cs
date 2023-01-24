@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Net
 {
-    public class IpRange : IEquatable<IpRange>
+    public readonly struct IpRange : IEquatable<IpRange>
     {
-        private byte[] Address { get; }
+        private byte[] Address { get; } = Array.Empty<byte>();
 
-        private int Mask { get; }
+        private int Mask { get; } = 0;
 
-        public Span<byte> GetAddress()
+        public ReadOnlySpan<byte> GetAddress()
             => Address;
 
         public int GetMask()
@@ -76,18 +76,13 @@ namespace Oc6.Library.Net
 
         }
 
-        public static bool TryParseCidr(string value, out IpRange? ipCidr)
+        public static bool TryParseCidr(string value, out IpRange ipCidr)
         {
-            if (value == null)
-            {
-                throw new ArgumentNullException(nameof(value));
-            }
-
             value = value.ToUpperInvariant();
 
             if (value.Any(c => !ValidChars.Contains(c)))
             {
-                ipCidr = null;
+                ipCidr = default;
                 return false;
             }
 
@@ -103,7 +98,7 @@ namespace Oc6.Library.Net
 
                 if (!int.TryParse(maskString, out int mask))
                 {
-                    ipCidr = null;
+                    ipCidr = default;
                     return false;
                 }
                 else
@@ -115,7 +110,7 @@ namespace Oc6.Library.Net
             }
         }
 
-        private static bool GetIpCidr(string ip, out IpRange? ipCidr, int? mask = null)
+        private static bool GetIpCidr(string ip, out IpRange ipCidr, int? mask = null)
         {
             if (IPAddress.TryParse(ip, out IPAddress? ipaddr))
             {
@@ -123,13 +118,13 @@ namespace Oc6.Library.Net
                 {
                     if (!ValidateIPv4(ip))
                     {
-                        ipCidr = null;
+                        ipCidr = default;
                         return false;
                     }
                 }
                 else if (ipaddr.AddressFamily != AddressFamily.InterNetworkV6)
                 {
-                    ipCidr = null;
+                    ipCidr = default;
                     return false;
                 }
 
@@ -147,21 +142,19 @@ namespace Oc6.Library.Net
                 }
                 catch (ArgumentOutOfRangeException)
                 {
-                    ipCidr = null;
+                    ipCidr = default;
                     return false;
                 }
             }
             else
             {
-                ipCidr = null;
+                ipCidr = default;
                 return false;
             }
         }
 
         public bool Overlap(IpRange other)
-            => other == null ? throw new ArgumentNullException(nameof(other))
-            : this.Comparer.Match(other.Comparable).Success
-            || other.Comparer.Match(this.Comparable).Success;
+            => this.Comparer.Match(other.Comparable).Success || other.Comparer.Match(this.Comparable).Success;
 
         private static bool ValidateIPv4(string ip)
         {
@@ -172,13 +165,8 @@ namespace Oc6.Library.Net
         public override string ToString()
             => $"{new IPAddress(Address)}/{Mask}";
 
-        public bool Equals(IpRange? other)
+        public bool Equals(IpRange other)
         {
-            if (other == null)
-            {
-                return false;
-            }
-
             return this.Comparable.Equals(other.Comparable, StringComparison.Ordinal);
         }
 
@@ -194,5 +182,15 @@ namespace Oc6.Library.Net
 
         public override int GetHashCode()
             => string.GetHashCode(this.Comparable, StringComparison.Ordinal);
+
+        public static bool operator ==(IpRange left, IpRange right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(IpRange left, IpRange right)
+        {
+            return !(left == right);
+        }
     }
 }

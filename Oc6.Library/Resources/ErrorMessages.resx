@@ -129,6 +129,9 @@
   <data name="InvalidState" xml:space="preserve">
     <value>Invalid state</value>
   </data>
+  <data name="ListCannotBeEmpty" xml:space="preserve">
+    <value>List cannot be empty</value>
+  </data>
   <data name="ListCannotBeNull" xml:space="preserve">
     <value>List cannot be null</value>
   </data>

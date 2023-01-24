@@ -9,25 +9,22 @@ namespace Oc6.Library.Collections
 {
     public static class IListExtensions
     {
-        public static void Shuffle<T>(this IList<T> list)
+        public static IList<T> Shuffle<T>(this IList<T> list)
         {
-            if (list == null)
-            {
-                throw new ArgumentNullException(nameof(list), ErrorMessages.ListCannotBeNull);
-            }
-
             for (int i = list.Count - 1; i > 0; --i)
             {
                 int j = Random.Shared.Next(0, i + 1);
                 (list[i], list[j]) = (list[j], list[i]);
             }
+
+            return list;
         }
 
         public static T TakeAndRemoveLast<T>(this IList<T> list)
         {
-            if (list == null)
+            if(list.Count == 0)
             {
-                throw new ArgumentNullException(nameof(list), ErrorMessages.ListCannotBeNull);
+                throw new ArgumentOutOfRangeException(nameof(list), ErrorMessages.ListCannotBeEmpty);
             }
 
             T t = list[^1];

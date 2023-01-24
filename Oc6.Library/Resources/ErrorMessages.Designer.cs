@@ -97,6 +97,15 @@ namespace Oc6.Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to List cannot be empty.
+        /// </summary>
+        internal static string ListCannotBeEmpty {
+            get {
+                return ResourceManager.GetString("ListCannotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to List cannot be null.
         /// </summary>
         internal static string ListCannotBeNull {
