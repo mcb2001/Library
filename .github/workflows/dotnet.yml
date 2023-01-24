@@ -21,7 +21,7 @@ jobs:
       uses: Amadevus/pwsh-script@v2
       id: update-version
       with:
-        script: '$csprojfilename = .\Oc6.Library\Oc6.Library.csproj;[xml]$csprojcontents = Get-Content -Path $csprojfilename;"Current version number is" + $csprojcontents.Project.PropertyGroup.Version;$oldversionNumber = $csprojcontents.Project.PropertyGroup.Version;$csprojcontents.Project.PropertyGroup.Version = ${{ github.run_number }};$csprojcontents.Save($csprojfilename)'
+        script: '$csprojfilename = ".\Oc6.Library\Oc6.Library.csproj";[xml]$csprojcontents = Get-Content -Path $csprojfilename;"Current version number is" + $csprojcontents.Project.PropertyGroup.Version;$oldversionNumber = $csprojcontents.Project.PropertyGroup.Version;$csprojcontents.Project.PropertyGroup.Version = ${{ github.run_number }};$csprojcontents.Save($csprojfilename)'
 
 
     - name: Setup .NET
