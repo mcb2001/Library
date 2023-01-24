@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuGet.Frameworks;
+﻿using NuGet.Frameworks;
 using Oc6.Library.Crypto;
 using System;
 using System.Collections.Generic;
@@ -9,27 +8,15 @@ using System.Threading.Tasks;
 
 namespace Oc6.Library.Tests.Crypto
 {
-    [TestClass]
-    public sealed class CryptoRandomNumberGeneratorTests
+    public  class CryptoRandomNumberGeneratorTests
     {
         private const int ITERATIONS = 10000;
-        private ICryptoRandomNumberGenerator randomNumberGenerator;
 
-        [TestInitialize]
-        public void Init()
-        {
-            randomNumberGenerator = new CryptoRandomNumberGenerator();
-        }
-
-        [TestCleanup]
-        public void Cleanup()
-        {
-            randomNumberGenerator.Dispose();
-        }
-
-        [TestMethod]
+        [Fact]
         public void NextToFrom_HitsAllValuesWithInAReasonableTime()
         {
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
             int from = 0;
             int to = 10;
 
@@ -43,50 +30,56 @@ namespace Oc6.Library.Tests.Crypto
 
                 if (i == ITERATIONS)
                 {
-                    Assert.IsTrue(false);
+                    Assert.True(false);
                 }
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void Next_ShouldNeverBeNegative()
         {
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
             for (int i = 0; i < ITERATIONS; ++i)
             {
-                Assert.IsTrue(randomNumberGenerator.NextInt() >= 0);
+                Assert.True(randomNumberGenerator.NextInt() >= 0);
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void NextToFrom_ShouldWorkWithNegativeNumbers()
         {
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
             for (int i = 0; i < ITERATIONS; ++i)
             {
-                Assert.IsTrue(randomNumberGenerator.NextInt(-100, 0) < 0);
+                Assert.True(randomNumberGenerator.NextInt(-100, 0) < 0);
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void NextToFrom_IsBoundedOnNegative()
         {
             NextToFrom_IsBounded(-1000, -100);
         }
 
-        [TestMethod]
+        [Fact]
         public void NextToFrom_IsBoundedTight()
         {
             NextToFrom_IsBounded(0, 2);
         }
 
-        [TestMethod]
+        [Fact]
         public void NextToFrom_IsBoundedLoose()
         {
             NextToFrom_IsBounded(int.MinValue / 2, int.MaxValue / 2);
         }
 
-        [TestMethod]
+        [Fact]
         public void Next_IsRandom()
         {
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
             int[] first = Enumerable.Range(0, ITERATIONS)
                 .Select(_ => randomNumberGenerator.NextInt())
                 .ToArray();
@@ -125,34 +118,42 @@ namespace Oc6.Library.Tests.Crypto
 
             int sum = equal + baseEqualFirst + baseEqualSecond;
 
-            Assert.IsTrue(sum < ITERATIONS / 3);
+            Assert.True(sum < ITERATIONS / 3);
         }
 
-        private void NextToFrom_IsBounded(int from, int to)
+        private static void NextToFrom_IsBounded(int from, int to)
         {
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
             for (int i = 0; i < ITERATIONS; ++i)
             {
                 var a = randomNumberGenerator.NextInt(from, to);
-                Assert.IsTrue(a >= from);
-                Assert.IsTrue(a < to);
+                Assert.True(a >= from);
+                Assert.True(a < to);
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void NextToFrom_FailsOnReversedFromTo()
         {
-            Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.NextInt(0, -1));
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
+            Assert.Throws<ArgumentException>(() => randomNumberGenerator.NextInt(0, -1));
         }
 
-        [TestMethod]
+        [Fact]
         public void NextToFrom_FailsOnEqualFromTo()
         {
-            Assert.ThrowsException<ArgumentException>(() => randomNumberGenerator.NextInt(0, 0));
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
+            Assert.Throws<ArgumentException>(() => randomNumberGenerator.NextInt(0, 0));
         }
 
-        [TestMethod]
+        [Fact]
         public void NextUnBounded_ReturnsBothPositiveAndNegativeValues()
         {
+            using ICryptoRandomNumberGenerator randomNumberGenerator = new CryptoRandomNumberGenerator();
+
             int i;
 
             //check if we hit below 0
@@ -162,7 +163,7 @@ namespace Oc6.Library.Tests.Crypto
 
             if (i == ITERATIONS)
             {
-                Assert.IsTrue(false);
+                Assert.True(false);
             }
 
             //check if we hit above 0
@@ -172,7 +173,7 @@ namespace Oc6.Library.Tests.Crypto
 
             if (i == ITERATIONS)
             {
-                Assert.IsTrue(false);
+                Assert.True(false);
             }
         }
     }

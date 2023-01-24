@@ -1,6 +1,7 @@
 ﻿using Oc6.Library.Resources;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -12,9 +13,15 @@ namespace Oc6.Library.Net
 {
     public class IpRange : IEquatable<IpRange>
     {
-        public byte[] Address { get; }
+        private byte[] Address { get; }
 
-        public int Mask { get; }
+        private int Mask { get; }
+
+        public Span<byte> GetAddress()
+            => Address;
+
+        public int GetMask()
+            => Mask;
 
         public AddressFamily Family => Address.Length == 4 ? AddressFamily.InterNetwork : AddressFamily.InterNetworkV6;
 

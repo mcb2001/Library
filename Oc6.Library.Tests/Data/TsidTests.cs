@@ -1,21 +1,22 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Oc6.Library.Data;
+﻿using Oc6.Library.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Oc6.Library.Tests.Data
 {
-    [TestClass]
     public class TsidTests
     {
-        [TestMethod]
+        [Fact]
         public void Create_Validate_Sortable()
         {
+            TsidFactory tsidFactory = new();
+
             List<long> unsorted = Enumerable.Range(0, byte.MaxValue)
-                .Select(_ => Tsid.Create())
+                .Select(_ => tsidFactory.Create())
                 .ToList();
 
             List<long> sorted = new(unsorted);
@@ -24,39 +25,28 @@ namespace Oc6.Library.Tests.Data
 
             for (int i = 0; i < sorted.Count; ++i)
             {
-                Assert.AreEqual(sorted[i], unsorted[i]);
+                Assert.Equal(sorted[i], unsorted[i]);
             }
         }
 
-        [TestMethod]
-        public void ToShortString_Binaries()
+        [Theory]
+        [InlineData("000000000000-03-0DEF", 0xCDEF)]
+        [InlineData("00048D159E26-AF-0DEF", 0x0123456789ABCDEF)]
+        [InlineData("000000000000-00-0000", 0)]
+        [InlineData("000000000000-00-0001", 1)]
+        [InlineData("01FFFFFFFFFF-FF-3FFE", long.MaxValue - 1)]
+        [InlineData("01FFFFFFFFFF-FF-3FFF", long.MaxValue)]
+        public void ToShortString(string expected, long tsid)
         {
-            Assert.AreEqual("0000-0000-0000-0000", Tsid.ToShortString(0b0000000000000000000000000000000000000000000000000000000000000000));
-            Assert.AreEqual("0000-0000-0000-0001", Tsid.ToShortString(0b0000000000000000000000000000000000000000000000000000000000000001));
-            Assert.AreEqual("7FFF-FFFF-FFFF-FFFF", Tsid.ToShortString(0b0111111111111111111111111111111111111111111111111111111111111111));
+            Assert.Equal(expected, TsidFactory.ToShortString(tsid));
         }
 
-        [TestMethod]
-        public void ToShortString_Hexadecimals()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(long.MinValue)]
+        public void ToShortString_Exception(long tsid)
         {
-            Assert.AreEqual("0000-0000-0000-CDEF", Tsid.ToShortString(0xCDEF));
-            Assert.AreEqual("0123-4567-89AB-CDEF", Tsid.ToShortString(0x0123456789ABCDEF));
-        }
-
-        [TestMethod]
-        public void ToShortString_EdgeCases()
-        {
-            Assert.AreEqual("0000-0000-0000-0000", Tsid.ToShortString(0));
-            Assert.AreEqual("0000-0000-0000-0001", Tsid.ToShortString(1));
-            Assert.AreEqual("7FFF-FFFF-FFFF-FFFE", Tsid.ToShortString(long.MaxValue - 1));
-            Assert.AreEqual("7FFF-FFFF-FFFF-FFFF", Tsid.ToShortString(long.MaxValue));
-        }
-
-        [TestMethod]
-        public void ToShortString_Exception()
-        {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => Tsid.ToShortString(-1));
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => Tsid.ToShortString(long.MinValue));
+            Assert.Throws<ArgumentOutOfRangeException>(() => TsidFactory.ToShortString(tsid));
         }
     }
 }

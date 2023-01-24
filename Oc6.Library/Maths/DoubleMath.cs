@@ -20,14 +20,7 @@ namespace Oc6.Library.Maths
                 return 0.0;
             }
 
-            try
-            {
-                return NewtonRaphson.Iterate(x => Math.Pow(x, root) - value, x => root * Math.Pow(x, root - 1), rounding: null);
-            }
-            catch (IterationsExceededException<double> exc)
-            {
-                return exc.LastValue;
-            }
+            return NewtonRaphson.Iterate(x => Math.Pow(x, root) - value, x => root * Math.Pow(x, root - 1), rounding: null).LastValue;
         }
     }
 }

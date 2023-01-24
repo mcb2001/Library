@@ -13,17 +13,11 @@ namespace Oc6.Library.Maths
             double t = (int)type;
             double guess = ((monthlyPayment * periods) - presentValue) / presentValue;
 
-            try
-            {
-                return NewtonRaphson.Iterate(
-                        (double r0) => (((presentValue * Math.Pow(1 + r0, periods)) - futureValue) / ((1 + (r0 * t)) * ((Math.Pow(1 + r0, periods) - 1) / r0))) - monthlyPayment,
-                        (double r0) => ((futureValue * ((periods * r0 * r0 * t * Math.Pow(1 + r0, periods)) + (periods * r0 * Math.Pow(1 + r0, periods)) - (r0 * Math.Pow(1 + r0, periods)) - Math.Pow(1 + r0, periods) + r0 + 1)) + (presentValue * Math.Pow(1 + r0, periods) * ((-periods * r0 * r0 * t) + Math.Pow(1 + r0, periods) + (r0 * (Math.Pow(1 + r0, periods) - periods - 1)) - 1))) / ((r0 + 1) * (Math.Pow(1 + r0, periods) - 1) * (Math.Pow(1 + r0, periods) - 1) * ((r0 * t) + 1) * ((r0 * t) + 1)),
-                        guess);
-            }
-            catch (IterationsExceededException<double> exc)
-            {
-                return exc.LastValue;
-            }
+            return NewtonRaphson.Iterate(
+                    (double r0) => (((presentValue * Math.Pow(1 + r0, periods)) - futureValue) / ((1 + (r0 * t)) * ((Math.Pow(1 + r0, periods) - 1) / r0))) - monthlyPayment,
+                    (double r0) => ((futureValue * ((periods * r0 * r0 * t * Math.Pow(1 + r0, periods)) + (periods * r0 * Math.Pow(1 + r0, periods)) - (r0 * Math.Pow(1 + r0, periods)) - Math.Pow(1 + r0, periods) + r0 + 1)) + (presentValue * Math.Pow(1 + r0, periods) * ((-periods * r0 * r0 * t) + Math.Pow(1 + r0, periods) + (r0 * (Math.Pow(1 + r0, periods) - periods - 1)) - 1))) / ((r0 + 1) * (Math.Pow(1 + r0, periods) - 1) * (Math.Pow(1 + r0, periods) - 1) * ((r0 * t) + 1) * ((r0 * t) + 1)),
+                    guess)
+            .LastValue;
         }
 
         public static decimal Rate(int periods, decimal presentValue, decimal futureValue, decimal monthlyPayment, PaymentType type)
@@ -32,17 +26,11 @@ namespace Oc6.Library.Maths
             decimal N0 = periods;
             decimal guess = ((monthlyPayment * periods) - presentValue) / presentValue;
 
-            try
-            {
-                return NewtonRaphson.Iterate(
-                       (decimal r0) => (((presentValue * DecimalMath.Pow(1M + r0, periods)) - futureValue) / ((1M + (r0 * t)) * ((DecimalMath.Pow(1M + r0, periods) - 1) / r0))) - monthlyPayment,
-                       (decimal r0) => ((futureValue * ((N0 * r0 * r0 * t * DecimalMath.Pow(1M + r0, periods)) + (periods * r0 * DecimalMath.Pow(1M + r0, periods)) - (r0 * DecimalMath.Pow(1M + r0, periods)) - DecimalMath.Pow(1M + r0, periods) + r0 + 1)) + (presentValue * DecimalMath.Pow(1M + r0, periods) * ((-N0 * r0 * r0 * t) + DecimalMath.Pow(1M + r0, periods) + (r0 * (DecimalMath.Pow(1 + r0, periods) - periods - 1)) - 1))) / ((r0 + 1) * (DecimalMath.Pow(1 + r0, periods) - 1) * (DecimalMath.Pow(1 + r0, periods) - 1) * ((r0 * t) + 1) * ((r0 * t) + 1)),
-                       guess);
-            }
-            catch (IterationsExceededException<decimal> exc)
-            {
-                return exc.LastValue;
-            }
+            return NewtonRaphson.Iterate(
+                   (decimal r0) => (((presentValue * DecimalMath.Pow(1M + r0, periods)) - futureValue) / ((1M + (r0 * t)) * ((DecimalMath.Pow(1M + r0, periods) - 1) / r0))) - monthlyPayment,
+                   (decimal r0) => ((futureValue * ((N0 * r0 * r0 * t * DecimalMath.Pow(1M + r0, periods)) + (periods * r0 * DecimalMath.Pow(1M + r0, periods)) - (r0 * DecimalMath.Pow(1M + r0, periods)) - DecimalMath.Pow(1M + r0, periods) + r0 + 1)) + (presentValue * DecimalMath.Pow(1M + r0, periods) * ((-N0 * r0 * r0 * t) + DecimalMath.Pow(1M + r0, periods) + (r0 * (DecimalMath.Pow(1 + r0, periods) - periods - 1)) - 1))) / ((r0 + 1) * (DecimalMath.Pow(1 + r0, periods) - 1) * (DecimalMath.Pow(1 + r0, periods) - 1) * ((r0 * t) + 1) * ((r0 * t) + 1)),
+                   guess)
+                .LastValue;
         }
 
         public static double Periods(double rate, double presentValue, double monthlyPayment, double futureValue, PaymentType type)

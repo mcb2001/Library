@@ -97,6 +97,15 @@ namespace Oc6.Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to List cannot be null.
+        /// </summary>
+        internal static string ListCannotBeNull {
+            get {
+                return ResourceManager.GetString("ListCannotBeNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Must be positive.
         /// </summary>
         internal static string MustBePositive {

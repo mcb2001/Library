@@ -17,23 +17,19 @@ namespace Oc6.Library.Data
     /// <para>Last 14 bits is randomness</para>
     /// <para>Guarenteed to generate 255 sortable unique Tsid every millisecond</para>
     /// </summary>
-    public static class Tsid
+    public class TsidFactory
     {
-        /// <summary>
-        /// The internal counter to allow for multiple Tsid's to be created at the same millisecond and still be sortable.
-        /// </summary>
-        private static byte internalCounter = 0;
+        public const long DateTimeMask = 0b0111111111111111111111111111111111111111110000000000000000000000;
 
-        /// <summary>
-        /// This factory is thread safe
-        /// </summary>
-        private static readonly object syncRoot = new();
+        public const long CounterMask = 0b0000000000000000000000000000000000000000001111111100000000000000;
 
-        /// <summary>
-        /// Creates a new Time Sortable Unique Identifier
-        /// </summary>
-        /// <returns></returns>
-        public static long Create()
+        public const long RandomMask = 0b0000000000000000000000000000000000000000000000000011111111111111;
+
+        private byte internalCounter = 0;
+
+        private readonly object syncRoot = new();
+
+        public long Create()
         {
             lock (syncRoot)
             {
@@ -71,30 +67,24 @@ namespace Oc6.Library.Data
                 throw new ArgumentOutOfRangeException(nameof(tsid), ErrorMessages.TsidMustBePositive);
             }
 
-            string baseString = Convert.ToString(tsid, 16)
+            string datetime = Convert.ToString((tsid & DateTimeMask) >> 22, 16)
                 .ToUpperInvariant()
-                .PadLeft(16, '0');
+                .PadLeft(12, '0');
+
+            string counter = Convert.ToString((tsid & CounterMask) >> 14, 16)
+                .ToUpperInvariant()
+                .PadLeft(2, '0');
+
+            string random = Convert.ToString(tsid & RandomMask, 16)
+                .ToUpperInvariant()
+                .PadLeft(4, '0');
 
             StringBuilder builder = new();
-            builder.Append(baseString[0]);
-            builder.Append(baseString[1]);
-            builder.Append(baseString[2]);
-            builder.Append(baseString[3]);
+            builder.Append(datetime);
             builder.Append('-');
-            builder.Append(baseString[4]);
-            builder.Append(baseString[5]);
-            builder.Append(baseString[6]);
-            builder.Append(baseString[7]);
+            builder.Append(counter);
             builder.Append('-');
-            builder.Append(baseString[8]);
-            builder.Append(baseString[9]);
-            builder.Append(baseString[10]);
-            builder.Append(baseString[11]);
-            builder.Append('-');
-            builder.Append(baseString[12]);
-            builder.Append(baseString[13]);
-            builder.Append(baseString[14]);
-            builder.Append(baseString[15]);
+            builder.Append(random);
             return builder.ToString();
         }
     }

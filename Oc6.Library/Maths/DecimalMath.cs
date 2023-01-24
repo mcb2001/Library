@@ -149,14 +149,7 @@ namespace Oc6.Library.Maths
                 return 0.0M;
             }
 
-            try
-            {
-                return NewtonRaphson.Iterate(x => PowSquareLaw(x, root) - value, x => root * PowSquareLaw(x, root - 1), rounding: null);
-            }
-            catch (IterationsExceededException<decimal> exc)
-            {
-                return exc.LastValue;
-            }
+            return NewtonRaphson.Iterate(x => PowSquareLaw(x, root) - value, x => root * PowSquareLaw(x, root - 1), rounding: null).LastValue;
         }
 
         public static decimal Sin(decimal angle)

@@ -356,14 +356,7 @@ namespace Oc6.Library.Maths
 
             BigInteger t;
 
-            try
-            {
-                t = NewtonRaphson.Iterate(x => (x * x) - input, x => 2 * x, 2147483648);
-            }
-            catch (IterationsExceededException<BigInteger> exc)
-            {
-                t = exc.LastValue;
-            }
+            t = NewtonRaphson.Iterate(x => (x * x) - input, x => 2 * x, 2147483648).LastValue;
 
             if (t * t == input)
             {
@@ -449,14 +442,7 @@ namespace Oc6.Library.Maths
             double i = input;
             double value;
 
-            try
-            {
-                value = NewtonRaphson.Iterate(x => (x * x) - i, x => 2.0 * x, 2147483648);
-            }
-            catch (IterationsExceededException<double> exc)
-            {
-                value = exc.LastValue;
-            }
+            value = NewtonRaphson.Iterate(x => (x * x) - i, x => 2.0 * x, 2147483648).LastValue;
 
             ulong t = (ulong)value;
 

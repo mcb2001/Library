@@ -14,681 +14,681 @@ namespace Oc6.Library.Localization
         /// <summary>
         ///Afrikaans - South Africa
         ///</summary>
-        af_ZA = 1,
+        afZA = 1,
 
         /// <summary>
         ///Albanian - Albania
         ///</summary>
-        sq_AL = 2,
+        sqAL = 2,
 
         /// <summary>
         ///Arabic - Algeria
         ///</summary>
-        ar_DZ = 3,
+        arDZ = 3,
 
         /// <summary>
         ///Arabic - Bahrain
         ///</summary>
-        ar_BH = 4,
+        arBH = 4,
 
         /// <summary>
         ///Arabic - Egypt
         ///</summary>
-        ar_EG = 5,
+        arEG = 5,
 
         /// <summary>
         ///Arabic - Iraq
         ///</summary>
-        ar_IQ = 6,
+        arIQ = 6,
 
         /// <summary>
         ///Arabic - Jordan
         ///</summary>
-        ar_JO = 7,
+        arJO = 7,
 
         /// <summary>
         ///Arabic - Kuwait
         ///</summary>
-        ar_KW = 8,
+        arKW = 8,
 
         /// <summary>
         ///Arabic - Lebanon
         ///</summary>
-        ar_LB = 9,
+        arLB = 9,
 
         /// <summary>
         ///Arabic - Libya
         ///</summary>
-        ar_LY = 10,
+        arLY = 10,
 
         /// <summary>
         ///Arabic - Morocco
         ///</summary>
-        ar_MA = 11,
+        arMA = 11,
 
         /// <summary>
         ///Arabic - Oman
         ///</summary>
-        ar_OM = 12,
+        arOM = 12,
 
         /// <summary>
         ///Arabic - Qatar
         ///</summary>
-        ar_QA = 13,
+        arQA = 13,
 
         /// <summary>
         ///Arabic - Saudi Arabia
         ///</summary>
-        ar_SA = 14,
+        arSA = 14,
 
         /// <summary>
         ///Arabic - Syria
         ///</summary>
-        ar_SY = 15,
+        arSY = 15,
 
         /// <summary>
         ///Arabic - Tunisia
         ///</summary>
-        ar_TN = 16,
+        arTN = 16,
 
         /// <summary>
         ///Arabic - United Arab Emirates
         ///</summary>
-        ar_AE = 17,
+        arAE = 17,
 
         /// <summary>
         ///Arabic - Yemen
         ///</summary>
-        ar_YE = 18,
+        arYE = 18,
 
         /// <summary>
         ///Armenian - Armenia
         ///</summary>
-        hy_AM = 19,
+        hyAM = 19,
 
         /// <summary>
         ///Azeri (Cyrillic) - Azerbaijan
         ///</summary>
-        Cy_az_AZ = 20,
+        CyAzAZ = 20,
 
         /// <summary>
         ///Azeri (Latin) - Azerbaijan
         ///</summary>
-        Lt_az_AZ = 21,
+        LtAzAZ = 21,
 
         /// <summary>
         ///Basque - Basque
         ///</summary>
-        eu_ES = 22,
+        euES = 22,
 
         /// <summary>
         ///Belarusian - Belarus
         ///</summary>
-        be_BY = 23,
+        beBY = 23,
 
         /// <summary>
         ///Bulgarian - Bulgaria
         ///</summary>
-        bg_BG = 24,
+        bgBG = 24,
 
         /// <summary>
         ///Catalan - Catalan
         ///</summary>
-        ca_ES = 25,
+        caES = 25,
 
         /// <summary>
         ///Chinese - China
         ///</summary>
-        zh_CN = 26,
+        zhCN = 26,
 
         /// <summary>
         ///Chinese - Hong Kong SAR
         ///</summary>
-        zh_HK = 27,
+        zhHK = 27,
 
         /// <summary>
         ///Chinese - Macau SAR
         ///</summary>
-        zh_MO = 28,
+        zhMO = 28,
 
         /// <summary>
         ///Chinese - Singapore
         ///</summary>
-        zh_SG = 29,
+        zhSG = 29,
 
         /// <summary>
         ///Chinese - Taiwan
         ///</summary>
-        zh_TW = 30,
+        zhTW = 30,
 
         /// <summary>
         ///Chinese (Simplified)
         ///</summary>
-        zh_CHS = 31,
+        zhCHS = 31,
 
         /// <summary>
         ///Chinese (Traditional)
         ///</summary>
-        zh_CHT = 32,
+        zhCHT = 32,
 
         /// <summary>
         ///Croatian - Croatia
         ///</summary>
-        hr_HR = 33,
+        hrHR = 33,
 
         /// <summary>
         ///Czech - Czech Republic
         ///</summary>
-        cs_CZ = 34,
+        csCZ = 34,
 
         /// <summary>
         ///Danish - Denmark
         ///</summary>
-        da_DK = 35,
+        daDK = 35,
 
         /// <summary>
         ///Dhivehi - Maldives
         ///</summary>
-        div_MV = 36,
+        divMV = 36,
 
         /// <summary>
         ///Dutch - Belgium
         ///</summary>
-        nl_BE = 37,
+        nlBE = 37,
 
         /// <summary>
         ///Dutch - The Netherlands
         ///</summary>
-        nl_NL = 38,
+        nlNL = 38,
 
         /// <summary>
         ///English - Australia
         ///</summary>
-        en_AU = 39,
+        enAU = 39,
 
         /// <summary>
         ///English - Belize
         ///</summary>
-        en_BZ = 40,
+        enBZ = 40,
 
         /// <summary>
         ///English - Canada
         ///</summary>
-        en_CA = 41,
+        enCA = 41,
 
         /// <summary>
         ///English - Caribbean
         ///</summary>
-        en_CB = 42,
+        enCB = 42,
 
         /// <summary>
         ///English - Ireland
         ///</summary>
-        en_IE = 43,
+        enIE = 43,
 
         /// <summary>
         ///English - Jamaica
         ///</summary>
-        en_JM = 44,
+        enJM = 44,
 
         /// <summary>
         ///English - New Zealand
         ///</summary>
-        en_NZ = 45,
+        enNZ = 45,
 
         /// <summary>
         ///English - Philippines
         ///</summary>
-        en_PH = 46,
+        enPH = 46,
 
         /// <summary>
         ///English - South Africa
         ///</summary>
-        en_ZA = 47,
+        enZA = 47,
 
         /// <summary>
         ///English - Trinidad and Tobago
         ///</summary>
-        en_TT = 48,
+        enTT = 48,
 
         /// <summary>
         ///English - United Kingdom
         ///</summary>
-        en_GB = 49,
+        enGB = 49,
 
         /// <summary>
         ///English - United States
         ///</summary>
-        en_US = 50,
+        enUS = 50,
 
         /// <summary>
         ///English - Zimbabwe
         ///</summary>
-        en_ZW = 51,
+        enZW = 51,
 
         /// <summary>
         ///Estonian - Estonia
         ///</summary>
-        et_EE = 52,
+        etEE = 52,
 
         /// <summary>
         ///Faroese - Faroe Islands
         ///</summary>
-        fo_FO = 53,
+        foFO = 53,
 
         /// <summary>
         ///Farsi - Iran
         ///</summary>
-        fa_IR = 54,
+        faIR = 54,
 
         /// <summary>
         ///Finnish - Finland
         ///</summary>
-        fi_FI = 55,
+        fiFI = 55,
 
         /// <summary>
         ///French - Belgium
         ///</summary>
-        fr_BE = 56,
+        frBE = 56,
 
         /// <summary>
         ///French - Canada
         ///</summary>
-        fr_CA = 57,
+        frCA = 57,
 
         /// <summary>
         ///French - France
         ///</summary>
-        fr_FR = 58,
+        frFR = 58,
 
         /// <summary>
         ///French - Luxembourg
         ///</summary>
-        fr_LU = 59,
+        frLU = 59,
 
         /// <summary>
         ///French - Monaco
         ///</summary>
-        fr_MC = 60,
+        frMC = 60,
 
         /// <summary>
         ///French - Switzerland
         ///</summary>
-        fr_CH = 61,
+        frCH = 61,
 
         /// <summary>
         ///Galician - Galician
         ///</summary>
-        gl_ES = 62,
+        glES = 62,
 
         /// <summary>
         ///Georgian - Georgia
         ///</summary>
-        ka_GE = 63,
+        kaGE = 63,
 
         /// <summary>
         ///German - Austria
         ///</summary>
-        de_AT = 64,
+        deAT = 64,
 
         /// <summary>
         ///German - Germany
         ///</summary>
-        de_DE = 65,
+        deDE = 65,
 
         /// <summary>
         ///German - Liechtenstein
         ///</summary>
-        de_LI = 66,
+        deLI = 66,
 
         /// <summary>
         ///German - Luxembourg
         ///</summary>
-        de_LU = 67,
+        deLU = 67,
 
         /// <summary>
         ///German - Switzerland
         ///</summary>
-        de_CH = 68,
+        deCH = 68,
 
         /// <summary>
         ///Greek - Greece
         ///</summary>
-        el_GR = 69,
+        elGR = 69,
 
         /// <summary>
         ///Gujarati - India
         ///</summary>
-        gu_IN = 70,
+        guIN = 70,
 
         /// <summary>
         ///Hebrew - Israel
         ///</summary>
-        he_IL = 71,
+        heIL = 71,
 
         /// <summary>
         ///Hindi - India
         ///</summary>
-        hi_IN = 72,
+        hiIN = 72,
 
         /// <summary>
         ///Hungarian - Hungary
         ///</summary>
-        hu_HU = 73,
+        huHU = 73,
 
         /// <summary>
         ///Icelandic - Iceland
         ///</summary>
-        is_IS = 74,
+        isIS = 74,
 
         /// <summary>
         ///Indonesian - Indonesia
         ///</summary>
-        id_ID = 75,
+        idID = 75,
 
         /// <summary>
         ///Italian - Italy
         ///</summary>
-        it_IT = 76,
+        itIT = 76,
 
         /// <summary>
         ///Italian - Switzerland
         ///</summary>
-        it_CH = 77,
+        itCH = 77,
 
         /// <summary>
         ///Japanese - Japan
         ///</summary>
-        ja_JP = 78,
+        jaJP = 78,
 
         /// <summary>
         ///Kannada - India
         ///</summary>
-        kn_IN = 79,
+        knIN = 79,
 
         /// <summary>
         ///Kazakh - Kazakhstan
         ///</summary>
-        kk_KZ = 80,
+        kkKZ = 80,
 
         /// <summary>
         ///Konkani - India
         ///</summary>
-        kok_IN = 81,
+        kokIN = 81,
 
         /// <summary>
         ///Korean - Korea
         ///</summary>
-        ko_KR = 82,
+        koKR = 82,
 
         /// <summary>
         ///Kyrgyz - Kazakhstan
         ///</summary>
-        ky_KZ = 83,
+        kyKZ = 83,
 
         /// <summary>
         ///Latvian - Latvia
         ///</summary>
-        lv_LV = 84,
+        lvLV = 84,
 
         /// <summary>
         ///Lithuanian - Lithuania
         ///</summary>
-        lt_LT = 85,
+        ltLT = 85,
 
         /// <summary>
         ///Macedonian (FYROM)
         ///</summary>
-        mk_MK = 86,
+        mkMK = 86,
 
         /// <summary>
         ///Malay - Brunei
         ///</summary>
-        ms_BN = 87,
+        msBN = 87,
 
         /// <summary>
         ///Malay - Malaysia
         ///</summary>
-        ms_MY = 88,
+        msMY = 88,
 
         /// <summary>
         ///Marathi - India
         ///</summary>
-        mr_IN = 89,
+        mrIN = 89,
 
         /// <summary>
         ///Mongolian - Mongolia
         ///</summary>
-        mn_MN = 90,
+        mnMN = 90,
 
         /// <summary>
         ///Norwegian (Bokmål) - Norway
         ///</summary>
-        nb_NO = 91,
+        nbNO = 91,
 
         /// <summary>
         ///Norwegian (Nynorsk) - Norway
         ///</summary>
-        nn_NO = 92,
+        nnNO = 92,
 
         /// <summary>
         ///Polish - Poland
         ///</summary>
-        pl_PL = 93,
+        plPL = 93,
 
         /// <summary>
         ///Portuguese - Brazil
         ///</summary>
-        pt_BR = 94,
+        ptBR = 94,
 
         /// <summary>
         ///Portuguese - Portugal
         ///</summary>
-        pt_PT = 95,
+        ptPT = 95,
 
         /// <summary>
         ///Punjabi - India
         ///</summary>
-        pa_IN = 96,
+        paIN = 96,
 
         /// <summary>
         ///Romanian - Romania
         ///</summary>
-        ro_RO = 97,
+        roRO = 97,
 
         /// <summary>
         ///Russian - Russia
         ///</summary>
-        ru_RU = 98,
+        ruRU = 98,
 
         /// <summary>
         ///Sanskrit - India
         ///</summary>
-        sa_IN = 99,
+        saIN = 99,
 
         /// <summary>
         ///Serbian (Cyrillic) - Serbia
         ///</summary>
-        Cy_sr_SP = 100,
+        CySrSP = 100,
 
         /// <summary>
         ///Serbian (Latin) - Serbia
         ///</summary>
-        Lt_sr_SP = 101,
+        LtSrSP = 101,
 
         /// <summary>
         ///Slovak - Slovakia
         ///</summary>
-        sk_SK = 102,
+        skSK = 102,
 
         /// <summary>
         ///Slovenian - Slovenia
         ///</summary>
-        sl_SI = 103,
+        slSI = 103,
 
         /// <summary>
         ///Spanish - Argentina
         ///</summary>
-        es_AR = 104,
+        esAR = 104,
 
         /// <summary>
         ///Spanish - Bolivia
         ///</summary>
-        es_BO = 105,
+        esBO = 105,
 
         /// <summary>
         ///Spanish - Chile
         ///</summary>
-        es_CL = 106,
+        esCL = 106,
 
         /// <summary>
         ///Spanish - Colombia
         ///</summary>
-        es_CO = 107,
+        esCO = 107,
 
         /// <summary>
         ///Spanish - Costa Rica
         ///</summary>
-        es_CR = 108,
+        esCR = 108,
 
         /// <summary>
         ///Spanish - Dominican Republic
         ///</summary>
-        es_DO = 109,
+        esDO = 109,
 
         /// <summary>
         ///Spanish - Ecuador
         ///</summary>
-        es_EC = 110,
+        esEC = 110,
 
         /// <summary>
         ///Spanish - El Salvador
         ///</summary>
-        es_SV = 111,
+        esSV = 111,
 
         /// <summary>
         ///Spanish - Guatemala
         ///</summary>
-        es_GT = 112,
+        esGT = 112,
 
         /// <summary>
         ///Spanish - Honduras
         ///</summary>
-        es_HN = 113,
+        esHN = 113,
 
         /// <summary>
         ///Spanish - Mexico
         ///</summary>
-        es_MX = 114,
+        esMX = 114,
 
         /// <summary>
         ///Spanish - Nicaragua
         ///</summary>
-        es_NI = 115,
+        esNI = 115,
 
         /// <summary>
         ///Spanish - Panama
         ///</summary>
-        es_PA = 116,
+        esPA = 116,
 
         /// <summary>
         ///Spanish - Paraguay
         ///</summary>
-        es_PY = 117,
+        esPY = 117,
 
         /// <summary>
         ///Spanish - Peru
         ///</summary>
-        es_PE = 118,
+        esPE = 118,
 
         /// <summary>
         ///Spanish - Puerto Rico
         ///</summary>
-        es_PR = 119,
+        esPR = 119,
 
         /// <summary>
         ///Spanish - Spain
         ///</summary>
-        es_ES = 120,
+        esES = 120,
 
         /// <summary>
         ///Spanish - Uruguay
         ///</summary>
-        es_UY = 121,
+        esUY = 121,
 
         /// <summary>
         ///Spanish - Venezuela
         ///</summary>
-        es_VE = 122,
+        esVE = 122,
 
         /// <summary>
         ///Swahili - Kenya
         ///</summary>
-        sw_KE = 123,
+        swKE = 123,
 
         /// <summary>
         ///Swedish - Finland
         ///</summary>
-        sv_FI = 124,
+        svFI = 124,
 
         /// <summary>
         ///Swedish - Sweden
         ///</summary>
-        sv_SE = 125,
+        svSE = 125,
 
         /// <summary>
         ///Syriac - Syria
         ///</summary>
-        syr_SY = 126,
+        syrSY = 126,
 
         /// <summary>
         ///Tamil - India
         ///</summary>
-        ta_IN = 127,
+        taIN = 127,
 
         /// <summary>
         ///Tatar - Russia
         ///</summary>
-        tt_RU = 128,
+        ttRU = 128,
 
         /// <summary>
         ///Telugu - India
         ///</summary>
-        te_IN = 129,
+        teIN = 129,
 
         /// <summary>
         ///Thai - Thailand
         ///</summary>
-        th_TH = 130,
+        thTH = 130,
 
         /// <summary>
         ///Turkish - Turkey
         ///</summary>
-        tr_TR = 131,
+        trTR = 131,
 
         /// <summary>
         ///Ukrainian - Ukraine
         ///</summary>
-        uk_UA = 132,
+        ukUA = 132,
 
         /// <summary>
         ///Urdu - Pakistan
         ///</summary>
-        ur_PK = 133,
+        urPK = 133,
 
         /// <summary>
         ///Uzbek (Cyrillic) - Uzbekistan
         ///</summary>
-        Cy_uz_UZ = 134,
+        CyUzUZ = 134,
 
         /// <summary>
         ///Uzbek (Latin) - Uzbekistan
         ///</summary>
-        Lt_uz_UZ = 135,
+        LtUzUZ = 135,
 
         /// <summary>
         ///Vietnamese - Vietnam
         ///</summary>
-        vi_VN = 136,
+        viVN = 136,
     }
 }
