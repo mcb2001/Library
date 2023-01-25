@@ -19,20 +19,8 @@ namespace Oc6.Library.Data
     /// <para>Last 14 bits is randomness</para>
     /// <para>Guarenteed to generate 255 sortable unique Tsid every millisecond</para>
     /// </summary>
-    public partial class TsidFactory : ITsidFactory
+    public class TsidFactory : ITsidFactory
     {
-
-        [GeneratedRegex(
-            "^" +
-            "(0[0-9a-fA-F]{11})" +
-            "-" +
-            "([0-9a-fA-F]{2})" +
-            "-" +
-            "([0-9a-fA-F]{4})" +
-            "$",
-            RegexOptions.Multiline | RegexOptions.Compiled)]
-        private static partial Regex GenerateParserRegex();
-
         public const long DateTimeMask = 0b0111111111111111111111111111111111111111110000000000000000000000;
 
         public const long CounterMask = 0b0000000000000000000000000000000000000000001111111100000000000000;
@@ -44,7 +32,7 @@ namespace Oc6.Library.Data
 
         private readonly object syncRoot = new();
 
-        private static readonly Regex parserRegex = GenerateParserRegex();
+        private static readonly Regex parserRegex = new("^(0[0-9a-fA-F]{11})-([0-9a-fA-F]{2})-([0-9a-fA-F]{4})$");
 
         public long CreateTsid()
         {
