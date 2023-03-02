@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Primitives;
 using Oc6.Library.Config;
-using Oc6.Library.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
