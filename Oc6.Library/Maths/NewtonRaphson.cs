@@ -15,7 +15,7 @@ namespace Oc6.Library.Maths
 
         public const int DefaultRounding = 14;
 
-        public static NewtonRaphsonResult<Complex> Iterate(Func<Complex, Complex> fx, Func<Complex, Complex> dydx, Complex? guess = null, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
+        public static IterationResult<Complex> Iterate(Func<Complex, Complex> fx, Func<Complex, Complex> dydx, Complex? guess = null, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
         {
             Complex x1 = guess ?? DefaultGuess, x0;
 
@@ -38,7 +38,7 @@ namespace Oc6.Library.Maths
             return new(x1, true);
         }
 
-        public static NewtonRaphsonResult<decimal> Iterate(Func<decimal, decimal> fx, Func<decimal, decimal> dydx, decimal guess = DefaultGuess, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
+        public static IterationResult<decimal> Iterate(Func<decimal, decimal> fx, Func<decimal, decimal> dydx, decimal guess = DefaultGuess, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
         {
             decimal x1 = guess, x0;
 
@@ -61,7 +61,7 @@ namespace Oc6.Library.Maths
             return new(x1, true);
         }
 
-        public static NewtonRaphsonResult<double> Iterate(Func<double, double> fx, Func<double, double> dydx, double guess = DefaultGuess, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
+        public static IterationResult<double> Iterate(Func<double, double> fx, Func<double, double> dydx, double guess = DefaultGuess, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
         {
             double x1 = guess, x0;
 
@@ -84,7 +84,7 @@ namespace Oc6.Library.Maths
             return new(x1, true);
         }
 
-        public static NewtonRaphsonResult<BigInteger> Iterate(Func<BigInteger, BigInteger> fx, Func<BigInteger, BigInteger> dydx, BigInteger? guess = null, int? iterations = DefaultIterations)
+        public static IterationResult<BigInteger> Iterate(Func<BigInteger, BigInteger> fx, Func<BigInteger, BigInteger> dydx, BigInteger? guess = null, int? iterations = DefaultIterations)
         {
             BigInteger x1 = guess ?? 1, x0;
 
@@ -102,7 +102,7 @@ namespace Oc6.Library.Maths
             return new(x1, true);
         }
 
-        public static NewtonRaphsonResult<float> Iterate(Func<float, float> fx, Func<float, float> dydx, float guess = DefaultGuess, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
+        public static IterationResult<float> Iterate(Func<float, float> fx, Func<float, float> dydx, float guess = DefaultGuess, int? iterations = DefaultIterations, int? rounding = DefaultRounding)
         {
             float x1 = guess, x0;
 
@@ -125,7 +125,7 @@ namespace Oc6.Library.Maths
             return new(x1, true);
         }
 
-        public static NewtonRaphsonResult<int> Iterate(Func<int, int> fx, Func<int, int> dydx, int guess = DefaultGuess, int? iterations = DefaultIterations)
+        public static IterationResult<int> Iterate(Func<int, int> fx, Func<int, int> dydx, int guess = DefaultGuess, int? iterations = DefaultIterations)
         {
             int x1 = guess, x0;
 
@@ -143,7 +143,7 @@ namespace Oc6.Library.Maths
             return new(x1, true);
         }
 
-        public static NewtonRaphsonResult<long> Iterate(Func<long, long> fx, Func<long, long> dydx, long guess = DefaultGuess, int? iterations = DefaultIterations)
+        public static IterationResult<long> Iterate(Func<long, long> fx, Func<long, long> dydx, long guess = DefaultGuess, int? iterations = DefaultIterations)
         {
             long x1 = guess, x0;
 
