@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Oc6.Library.Data
@@ -30,15 +31,10 @@ namespace Oc6.Library.Data
 
         private const char Padding = '=';
 
+        private static Regex ValidBase32 = new Regex("^[A-Z2-7]+(=|===|====|======)?$");
+
         public static string Encode(byte[] data)
             => Convert(Enumerate(PadAndClode(data)).Select(x => GetChar(x)), data.Length);
-
-        public static byte[] Decode(string text)
-        {
-            Span<char> chars = text.ToCharArray();
-
-            throw new NotImplementedException();
-        }
 
         private static char GetChar(int i)
             => i switch
@@ -75,7 +71,7 @@ namespace Oc6.Library.Data
                 29 => '5',
                 30 => '6',
                 31 => '7',
-                _ => throw new NotSupportedException(),
+                _ => throw new ArgumentException($"Invalid int: {i}"),
             };
 
         private static int GetValue(char c)
@@ -113,7 +109,8 @@ namespace Oc6.Library.Data
                 '5' => 29,
                 '6' => 30,
                 '7' => 31,
-                _ => throw new NotSupportedException(),
+                '=' => 0,
+                _ => throw new ArgumentException($"Invalid char: {c}"),
             };
 
         private static string Convert(IEnumerable<char> chars, int lenght)
@@ -145,29 +142,29 @@ namespace Oc6.Library.Data
         {
             for (int i = 0; i < data.Length; i += 5)
             {
-                yield return ShiftAndMask(data[i + 0], x0, 3);
+                yield return MaskThenShift(data[i + 0], x0, 3);
 
-                yield return Combine(ShiftAndMask(data[i + 0], x1a, -2), ShiftAndMask(data[i + 1], x1b, 6));
+                yield return Combine(MaskThenShift(data[i + 0], x1a, -2), MaskThenShift(data[i + 1], x1b, 6));
 
-                yield return ShiftAndMask(data[i + 1], x2, 1);
+                yield return MaskThenShift(data[i + 1], x2, 1);
 
-                yield return Combine(ShiftAndMask(data[i + 1], x3a, -4), ShiftAndMask(data[i + 2], x3b, 4));
+                yield return Combine(MaskThenShift(data[i + 1], x3a, -4), MaskThenShift(data[i + 2], x3b, 4));
 
-                yield return Combine(ShiftAndMask(data[i + 2], x4a, -1), ShiftAndMask(data[i + 3], x4b, 7));
+                yield return Combine(MaskThenShift(data[i + 2], x4a, -1), MaskThenShift(data[i + 3], x4b, 7));
 
-                yield return ShiftAndMask(data[i + 3], x5, 2);
+                yield return MaskThenShift(data[i + 3], x5, 2);
 
-                yield return Combine(ShiftAndMask(data[i + 3], x6a, -3), ShiftAndMask(data[i + 4], x6b, 5));
+                yield return Combine(MaskThenShift(data[i + 3], x6a, -3), MaskThenShift(data[i + 4], x6b, 5));
 
-                yield return ShiftAndMask(data[i + 4], x7, 0);
+                yield return MaskThenShift(data[i + 4], x7, 0);
             }
         }
 
         private static int Combine(int a, int b)
             => a | b;
 
-        private static int ShiftAndMask(int value, int mask, int pad)
-            => pad >= 0 ? (value & mask) >> pad : (value & mask) << -pad;
+        private static int MaskThenShift(int value, int mask, int shift)
+            => shift >= 0 ? (value & mask) >> shift : (value & mask) << -shift;
 
         private static byte[] PadAndClode(byte[] data)
         {
